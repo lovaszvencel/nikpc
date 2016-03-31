@@ -61,6 +61,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Interfaces\IAdatKezelo.cs" />
+    <Compile Include="Interfaces\IBelepesKezelo.cs" />
+    <Compile Include="Interfaces\IFelhasznaloKezelo.cs" />
+    <Compile Include="Interfaces\IFizetesKezelo.cs" />
+    <Compile Include="Interfaces\IMegrendelesekKezelese.cs" />
+    <Compile Include="Interfaces\IMegrendelesKezelo.cs" />
+    <Compile Include="Interfaces\IRendszerfunkciokKezelese.cs" />
+    <Compile Include="Interfaces\ISzamlaKezelo.cs" />
+    <Compile Include="Interfaces\ITermekkategoriaKezelo.cs" />
+    <Compile Include="Interfaces\ITermekKezelo.cs" />
+    <Compile Include="Interfaces\ITermekListaKezelo.cs" />
+    <Compile Include="Interfaces\ITermekListaMegtekintesKezelo.cs" />
+    <Compile Include="Interfaces\ITermekMegtekintesKezelo.cs" />
+    <Compile Include="Interfaces\IUjFelhasznaloKezelo.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
