@@ -4,9 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nikpc.Interfaces
+namespace Nikpc.Classes
 {
-    interface ITermekListaKezelo
-    {
-    }
+    enum FizetesiMod { kézpénsz, kártya }
 }
