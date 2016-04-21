@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,30 +15,20 @@ namespace Nikpc.Controllers
 
         }
 
-		/// 
-		/// <param name="jelszó"></param>
-		/// <param name="név"></param>
 		public void Belépés(string jelszó, string név){
 
 		}
 
-		/// 
-		/// <param name="felhasznalo"></param>
 		public void FelhasznaloHozzaadas(Felhasznalo felhasznalo){
 
 		}
 
-		/// 
-		/// <param name="felhasznalo"></param>
 		public void FelhasznaloModositas(Felhasznalo felhasznalo){
 
 		}
 
-		/// 
-		/// <param name="felhasznalo"></param>
 		public void FelhasznaloTorles(Felhasznalo felhasznalo){
 
 		}
-
-	}//end AdminCtrl
+	}
 }

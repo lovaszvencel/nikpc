@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,17 +19,12 @@ namespace Nikpc.Controllers
 
 		}
 
-		/// 
-		/// <param name="szamla"></param>
 		public void SzamlaKuldes(Szamla szamla){
 
 		}
 
-		/// 
-		/// <param name="szamla"></param>
 		public void SzamlaNyomtatas(Szamla szamla){
 
 		}
-
-	}//end SzámlaCtrl
+	}
 }

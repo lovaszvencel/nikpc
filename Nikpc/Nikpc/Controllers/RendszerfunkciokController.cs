@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +14,6 @@ namespace Nikpc.Controllers
         {
 
         }
-
 
 		public List<Termek> AkciosTermekekKivalasztasa(){
 
@@ -31,5 +32,5 @@ namespace Nikpc.Controllers
 
 		}
 
-	}//end RendszerfunkciókCtrl
+	}
 }

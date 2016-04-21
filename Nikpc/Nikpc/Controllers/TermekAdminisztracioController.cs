@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,17 +10,11 @@ namespace Nikpc.Controllers
 {
     class TermekAdminisztracioController  : ITermekKezelo, ITermekListaKezelo {
 
-        public FelhasznaloController ()
+        public TermekAdminisztracioController()
 	    {
 
 	    }
 
-		/// 
-		/// <param name="termekNev"></param>
-		/// <param name="termekKategoria"></param>
-		/// <param name="arAlso"></param>
-		/// <param name="arFelso"></param>
-		/// <param name="raktaron"></param>
 		public void Kereses(string termekNev, string termekKategoria, int arAlso, int arFelso, bool raktaron){
 
 		}
@@ -27,9 +23,6 @@ namespace Nikpc.Controllers
 
 		}
 
-		/// 
-		/// <param name="rendezesiParameter"></param>
-		/// <param name="novekvo"></param>
 		public void Rendezes(string rendezesiParameter, bool novekvo){
 
 		}
@@ -38,35 +31,26 @@ namespace Nikpc.Controllers
 
 		}
 
-		/// 
-		/// <param name="termek"></param>
-		public void ITermekKezelo.TermekHozzaadas(Termek termek){
+		/*public void ITermekKezelo.TermekHozzaadas(Termek termek){
 
 		}
 
 		public void ITermekListaKezelo.TermekHozzaadas(){
 
-		}
+		}*/
 
 		public void TermékImportálás(){
 
 		}
 
-		/// 
-		/// <param name="termek"></param>
-		/// <param name="int"></param>
-		public void TermékLefoglalása(Termék termek, darab int){
+		public void TermékLefoglalása(Termek termek, int darab){
 
 		}
 
-		/// 
-		/// <param name="termek"></param>
 		public void TermekModositas(Termek termek){
 
 		}
 
-		/// 
-		/// <param name="termek"></param>
 		public void TermekTorles(Termek termek){
 
 		}

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,38 +8,37 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    class FizetesController : IFizetesKezelo {
+    class FizetesController : IFizetesKezelo
+    {
 
-        public FizetesController ()
-	    {
+        public FizetesController()
+        {
 
-	    }
+        }
 
-		public void Elutasítás(){
+        public void Elutasítás()
+        {
 
-		}
+        }
 
-		/// 
-		/// <param name="mod"></param>
-		/// <param name="megrendeles"></param>
-		public void Fizetes(FizetesiMod mod, Megrendeles megrendeles){
+        public void Fizetes(FizetesiMod mod, Megrendeles megrendeles)
+        {
 
-		}
+        }
 
-		public void KosárFizetése(){
+        public void KosárFizetése()
+        {
 
-		}
+        }
 
-		public void SikeresFizetésVisszaigazolás(){
+        public void SikeresFizetésVisszaigazolás()
+        {
 
-		}
+        }
 
-		/// 
-		/// <param name="megrendeles"></param>
-		public void SzamlaKiallitas(Megrendeles megrendeles){
+        public void SzamlaKiallitas(Megrendeles megrendeles)
+        {
 
-		}
-
-	}//end FizetésCtrl
-
+        }
+    }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,17 +15,10 @@ namespace Nikpc.Controllers
 
 	    }
 
-		/// 
-		/// <param name="felhasznalonev"></param>
-		/// <param name="jelszo"></param>
-		/// <param name="email"></param>
 		public void Adatellenorzes(string felhasznalonev, string jelszo, string email){
 
 		}
 
-		/// 
-		/// <param name="felhasznalonev"></param>
-		/// <param name="jelszo"></param>
 		public bool AutentikaciosEllenorzes(string felhasznalonev, string jelszo){
 
 			return false;
@@ -33,20 +28,14 @@ namespace Nikpc.Controllers
 
 		}
 
-		/// 
-		/// <param name="ujCim"></param>
 		public void CimModositas(string ujCim){
 
 		}
 
-		/// 
-		/// <param name="ujEmail"></param>
 		public void EmailModositas(string ujEmail){
 
 		}
 
-		/// 
-		/// <param name="felhasznalo"></param>
 		public void FelhasznaloHozzaadas(Felhasznalo felhasznalo){
 
 		}
@@ -55,8 +44,6 @@ namespace Nikpc.Controllers
 
 		}
 
-		/// 
-		/// <param name="ujJelszo"></param>
 		public void JelszoModositas(string ujJelszo){
 
 		}
@@ -69,6 +56,5 @@ namespace Nikpc.Controllers
 
 			return false;
 		}
-
-	}//end FelhasználóCtrl
+	}
 }
