@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="83b68ad0ec88462e99b506ba4cb0809e" Name="Diagram1">
+        <EntityTypeShape EntityType="NIKPC_DatabaseModel.Invoices" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NIKPC_DatabaseModel.OrderedProducts" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NIKPC_DatabaseModel.Orders" Width="1.5" PointX="3" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NIKPC_DatabaseModel.ProductCategories" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NIKPC_DatabaseModel.Products" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NIKPC_DatabaseModel.Users" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <AssociationConnector Association="NIKPC_DatabaseModel.FK__Invoices__OrderI__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="NIKPC_DatabaseModel.FK__OrderedPr__Order__5FB337D6" ManuallyRouted="false" />
+        <AssociationConnector Association="NIKPC_DatabaseModel.FK__OrderedPr__Produ__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="NIKPC_DatabaseModel.FK__Orders__UserID__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="NIKPC_DatabaseModel.FK__Products__Catego__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
