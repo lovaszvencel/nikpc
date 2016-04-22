@@ -21,7 +21,7 @@ namespace Nikpc.Windows
     {
         public ProductListWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }        
     }
 }

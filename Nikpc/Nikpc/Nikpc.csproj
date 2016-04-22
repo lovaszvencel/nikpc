@@ -100,27 +100,10 @@
     <Compile Include="Users.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AdminWindow.xaml.cs">
-      <DependentUpon>AdminWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\LogInWindow.xaml.cs">
-      <DependentUpon>LogInWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ModifyingUsersWindow.xaml.cs">
-      <DependentUpon>ModifyingUsersWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ProductListWindow.xaml.cs">
-      <DependentUpon>ProductListWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ModifyingMyDateWindow.xaml.cs">
-      <DependentUpon>ModifyingMyDateWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\ModifyingUserDataWindow.xaml.cs">
-      <DependentUpon>ModifyingUserDataWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Windows\RegistrationWindow.xaml.cs">
-      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Windows\AdminWindow.xaml.cs" />
+    <Compile Include="Windows\LogInWindow.xaml.cs" />
+    <Compile Include="Windows\ModifyingUsersWindow.xaml.cs" />
+    <Compile Include="Windows\ProductListWindow.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -147,6 +130,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\AdminWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\LogInWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ModifyingUsersWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\ProductListWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NIKPC_DataModel.Context.cs">
