@@ -15,13 +15,13 @@ using System.Windows.Shapes;
 namespace Nikpc.Windows
 {
     /// <summary>
-    /// Interaction logic for ModifyingUsersWindow.xaml
+    /// Interaction logic for OrderPlacementWindow.xaml
     /// </summary>
-    public partial class ModifyingUsersWindow : Window
+    public partial class OrderPlacementWindow : Window
     {
-        public ModifyingUsersWindow()
+        public OrderPlacementWindow()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
     }
 }

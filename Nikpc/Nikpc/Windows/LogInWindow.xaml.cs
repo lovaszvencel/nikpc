@@ -21,7 +21,7 @@ namespace Nikpc.Windows
     {
         public LogInWindow()
         {
-            InitializeComponent(); 
+            InitializeComponent();
         }
     }
 }

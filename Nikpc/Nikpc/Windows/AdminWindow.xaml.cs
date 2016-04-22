@@ -22,6 +22,6 @@ namespace Nikpc.Windows
         public AdminWindow()
         {
             InitializeComponent();
-        } 
+        }
     }
 }

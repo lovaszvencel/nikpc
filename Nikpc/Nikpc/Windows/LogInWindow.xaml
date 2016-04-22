@@ -5,7 +5,7 @@
         Background="#FFB2D3CD">
     <Grid>
         <Label Content="Felhasználónév:" HorizontalAlignment="Left" Height="40" Margin="137,136,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/>
-        <Label Content="Jelszó:" HorizontalAlignment="Left" Height="40" Margin="137,181,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/> 
+        <Label Content="Jelszó:" HorizontalAlignment="Left" Height="40" Margin="137,181,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/>
         <TextBox x:Name="userNameTxt" HorizontalAlignment="Left" Height="40" Margin="299,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <TextBox x:Name="passwordTxt" HorizontalAlignment="Left" Height="40" Margin="299,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <Button x:Name="enterButton" Content="Belépés" HorizontalAlignment="Left" Height="40" Margin="174,240,0,0" VerticalAlignment="Top" Width="120"/>

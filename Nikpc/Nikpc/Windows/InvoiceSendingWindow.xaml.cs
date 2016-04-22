@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Nikpc.Windows
 {
     /// <summary>
-    /// Interaction logic for ProductListWindow.xaml
+    /// Interaction logic for InvoiceSendingWindow.xaml
     /// </summary>
-    public partial class ProductListWindow : Window
+    public partial class InvoiceSendingWindow : Window
     {
-        public ProductListWindow()
+        public InvoiceSendingWindow()
         {
             InitializeComponent();
         }

@@ -100,19 +100,45 @@
     <Compile Include="Users.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Windows\AdminWindow.xaml.cs" />
-    <Compile Include="Windows\LogInWindow.xaml.cs" />
+    <Compile Include="Windows\AdminWindow.xaml.cs">
+      <DependentUpon>AdminWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InvoicePrintWindow.xaml.cs">
+      <DependentUpon>InvoicePrintWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InvoiceSendingWindow.xaml.cs">
+      <DependentUpon>InvoiceSendingWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\LogInWindow.xaml.cs">
+      <DependentUpon>LogInWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ModifyingOrderListWindow.xaml.cs">
       <DependentUpon>ModifyingOrderListWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ModifyingProductListWindow.xaml.cs">
       <DependentUpon>ModifyingProductListWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ModifyingUsersWindow.xaml.cs" />
+    <Compile Include="Windows\ModifyingUserListWindow.xaml.cs">
+      <DependentUpon>ModifyingUserListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ModifyProductInfo.xaml.cs">
+      <DependentUpon>ModifyProductInfo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\OrderPlacementWindow.xaml.cs">
+      <DependentUpon>OrderPlacementWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProductCategoriesWindow.xaml.cs">
+      <DependentUpon>ProductCategoriesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ProductInfo.xaml.cs">
+      <DependentUpon>ProductInfo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\PaymentWindow.xaml.cs">
       <DependentUpon>PaymentWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ProductListWindow.xaml.cs" />
+    <Compile Include="Windows\ProductListWindow.xaml.cs">
+      <DependentUpon>ProductListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\StatsWindow.xaml.cs">
       <DependentUpon>StatsWindow.xaml</DependentUpon>
     </Compile>
@@ -143,12 +169,20 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Windows\AdminWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\InvoicePrintWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\InvoiceSendingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\LogInWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ModifyingOrderListWindow.xaml">
       <SubType>Designer</SubType>
@@ -158,17 +192,33 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ModifyingUsersWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Windows\ModifyingUserListWindow.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\PaymentWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Windows\ProductListWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Windows\ModifyProductInfo.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\OrderPlacementWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProductCategoriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProductInfo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ProductListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\StatsWindow.xaml">
       <SubType>Designer</SubType>
