@@ -1,0 +1,18 @@
+﻿<Window x:Class="Nikpc.Windows.LogInWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Belépés" Height="500" Width="600"
+        Background="#FFB2D3CD">
+    <Grid>
+        <Label Content="Felhasználónév:" HorizontalAlignment="Left" Height="40" Margin="137,136,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/>
+        <Label Content="Jelszó:" HorizontalAlignment="Left" Height="40" Margin="137,181,0,0" VerticalAlignment="Top" Width="150" FontSize="16"/>
+        <TextBox x:Name="userNameTxt" HorizontalAlignment="Left" Height="40" Margin="299,136,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox x:Name="passwordTxt" HorizontalAlignment="Left" Height="40" Margin="299,181,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="enterButton" Content="Belépés" HorizontalAlignment="Left" Height="40" Margin="174,240,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="enterGuestButton" Content="Belépés vendégként" HorizontalAlignment="Left" Height="40" Margin="299,240,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="regButton" Content="Regisztráció" HorizontalAlignment="Left" Height="40" Margin="237,285,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="exitButton" Content="Kilépés" HorizontalAlignment="Left" Height="40" Margin="237,330,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="NIKPC Kft." HorizontalAlignment="Center" Height="63" Margin="0,40,0,0" VerticalAlignment="Top" Width="236" FontSize="45" FontWeight="Bold"/>
+
+    </Grid>
+</Window>
