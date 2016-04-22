@@ -102,8 +102,20 @@
     </Compile>
     <Compile Include="Windows\AdminWindow.xaml.cs" />
     <Compile Include="Windows\LogInWindow.xaml.cs" />
+    <Compile Include="Windows\ModifyingOrderListWindow.xaml.cs">
+      <DependentUpon>ModifyingOrderListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ModifyingProductListWindow.xaml.cs">
+      <DependentUpon>ModifyingProductListWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ModifyingUsersWindow.xaml.cs" />
+    <Compile Include="Windows\PaymentWindow.xaml.cs">
+      <DependentUpon>PaymentWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ProductListWindow.xaml.cs" />
+    <Compile Include="Windows\StatsWindow.xaml.cs">
+      <DependentUpon>StatsWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -138,13 +150,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\ModifyingOrderListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ModifyingProductListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\ModifyingUsersWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Windows\PaymentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\ProductListWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\StatsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

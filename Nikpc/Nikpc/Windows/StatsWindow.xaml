@@ -1,0 +1,13 @@
+﻿<Window x:Class="Nikpc.Windows.StatsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statisztikák és napló" Height="720" Width="450"
+        Background="#FFB2D3CD">
+    <Grid>
+        <Label Content="Statisztikák és napló" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Statisztikák" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="25"/>
+        <Label Content="Napló" HorizontalAlignment="Left" Margin="10,380,0,0" VerticalAlignment="Top" Height="25"/>
+        <ListBox x:Name="statsList" HorizontalAlignment="Left" Height="250" Margin="10,110,0,0" VerticalAlignment="Top" Width="422.5"/>
+        <ListBox x:Name="logList" HorizontalAlignment="Left" Height="250" Margin="10,420,0,0" VerticalAlignment="Top" Width="422.5"/>
+    </Grid>
+</Window>
