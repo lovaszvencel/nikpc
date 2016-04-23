@@ -98,6 +98,11 @@
     <Compile Include="Invoice.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="NIKPC_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NIKPC_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="NIKPC_DataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -296,6 +301,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NIKPC_DataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="NIKPC_DatabaseDataSet.xsc">
+      <DependentUpon>NIKPC_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="NIKPC_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NIKPC_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="NIKPC_DatabaseDataSet.xss">
+      <DependentUpon>NIKPC_DatabaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="NIKPC_DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NIKPC_DataModel.edmx</DependentUpon>
