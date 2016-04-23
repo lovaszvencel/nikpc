@@ -12,11 +12,11 @@ namespace Nikpc
     using System;
     using System.Collections.Generic;
     
-    public partial class Users
+    public partial class User
     {
-        public Users()
+        public User()
         {
-            this.Orders = new HashSet<Orders>();
+            this.Orders = new HashSet<Order>();
         }
     
         public int Id { get; set; }
@@ -28,6 +28,6 @@ namespace Nikpc
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
     
-        public virtual ICollection<Orders> Orders { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

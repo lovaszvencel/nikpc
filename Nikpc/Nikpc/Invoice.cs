@@ -12,16 +12,13 @@ namespace Nikpc
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductCategories
+    public partial class Invoice
     {
-        public ProductCategories()
-        {
-            this.Products = new HashSet<Products>();
-        }
-    
         public int Id { get; set; }
-        public string Name { get; set; }
+        public int OrderId { get; set; }
+        public System.DateTime Date { get; set; }
+        public int Total { get; set; }
     
-        public virtual ICollection<Products> Products { get; set; }
+        public virtual Order Order { get; set; }
     }
 }

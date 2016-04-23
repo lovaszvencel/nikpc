@@ -12,11 +12,11 @@ namespace Nikpc
     using System;
     using System.Collections.Generic;
     
-    public partial class Products
+    public partial class Product
     {
-        public Products()
+        public Product()
         {
-            this.OrderedProducts = new HashSet<OrderedProducts>();
+            this.OrderedProducts = new HashSet<OrderedProduct>();
         }
     
         public int Id { get; set; }
@@ -28,7 +28,7 @@ namespace Nikpc
         public Nullable<double> RatingAverage { get; set; }
         public Nullable<int> OnSale { get; set; }
     
-        public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
-        public virtual ProductCategories ProductCategories { get; set; }
+        public virtual ICollection<OrderedProduct> OrderedProducts { get; set; }
+        public virtual ProductCategory ProductCategory { get; set; }
     }
 }

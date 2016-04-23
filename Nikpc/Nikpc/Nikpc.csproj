@@ -77,27 +77,41 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Invoices.cs">
+    <Compile Include="Classes\Invoice.cs" />
+    <Compile Include="Classes\Order.cs" />
+    <Compile Include="Classes\OrderedProduct.cs" />
+    <Compile Include="Classes\User.cs" />
+    <Compile Include="Invoice.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NIKPC_DataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NIKPC_DataModel.Context.tt</DependentUpon>
     </Compile>
     <Compile Include="NIKPC_DataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="OrderedProducts.cs">
+    <Compile Include="NIKPC_DataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NIKPC_DataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Order.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Orders.cs">
+    <Compile Include="OrderedProduct.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ProductCategories.cs">
+    <Compile Include="Product.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Products.cs">
+    <Compile Include="ProductCategory.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Users.cs">
+    <Compile Include="User.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Windows\AdminWindow.xaml.cs">
@@ -150,20 +164,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interfaces\IAdatKezelo.cs" />
-    <Compile Include="Interfaces\IBelepesKezelo.cs" />
-    <Compile Include="Interfaces\IFelhasznaloKezelo.cs" />
-    <Compile Include="Interfaces\IFizetesKezelo.cs" />
-    <Compile Include="Interfaces\IMegrendelesekKezelese.cs" />
-    <Compile Include="Interfaces\IMegrendelesKezelo.cs" />
-    <Compile Include="Interfaces\IRendszerfunkciokKezelese.cs" />
-    <Compile Include="Interfaces\ISzamlaKezelo.cs" />
-    <Compile Include="Interfaces\ITermekkategoriaKezelo.cs" />
-    <Compile Include="Interfaces\ITermekKezelo.cs" />
-    <Compile Include="Interfaces\ITermekListaKezelo.cs" />
-    <Compile Include="Interfaces\ITermekListaMegtekintesKezelo.cs" />
-    <Compile Include="Interfaces\ITermekMegtekintesKezelo.cs" />
-    <Compile Include="Interfaces\IUjFelhasznaloKezelo.cs" />
+    <Compile Include="Interfaces\IDataHandler.cs" />
+    <Compile Include="Interfaces\ILogInHandler.cs" />
+    <Compile Include="Interfaces\IUserHandler.cs" />
+    <Compile Include="Interfaces\IPaymentHandler.cs" />
+    <Compile Include="Interfaces\IOrderListHandler.cs" />
+    <Compile Include="Interfaces\IOrderHandler.cs" />
+    <Compile Include="Interfaces\IStatsLogHandler.cs" />
+    <Compile Include="Interfaces\IInvoiceHandler.cs" />
+    <Compile Include="Interfaces\IProductCategoryHandler.cs" />
+    <Compile Include="Interfaces\IProductHandler.cs" />
+    <Compile Include="Interfaces\IProductListHandler.cs" />
+    <Compile Include="Interfaces\IProductListViewHandler.cs" />
+    <Compile Include="Interfaces\IProductViewHandler.cs" />
+    <Compile Include="Interfaces\INewUserHandler.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -226,16 +240,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NIKPC_DataModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NIKPC_DataModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NIKPC_DataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>NIKPC_DataModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -256,7 +260,6 @@
     <EntityDeploy Include="NIKPC_DataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NIKPC_DataModel.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EntityDeploy>
     <None Include="NIKPC_DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

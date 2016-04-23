@@ -13,10 +13,10 @@ namespace Nikpc
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NIKPC_DatabaseEntities : DbContext
+    public partial class NIKPC_DatabaseEntitiesConnectionString : DbContext
     {
-        public NIKPC_DatabaseEntities()
-            : base("name=NIKPC_DatabaseEntities")
+        public NIKPC_DatabaseEntitiesConnectionString()
+            : base("name=NIKPC_DatabaseEntitiesConnectionString")
         {
         }
     
@@ -25,11 +25,11 @@ namespace Nikpc
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Invoices> Invoices { get; set; }
-        public virtual DbSet<OrderedProducts> OrderedProducts { get; set; }
-        public virtual DbSet<Orders> Orders { get; set; }
-        public virtual DbSet<ProductCategories> ProductCategories { get; set; }
-        public virtual DbSet<Products> Products { get; set; }
-        public virtual DbSet<Users> Users { get; set; }
+        public virtual DbSet<Invoice> Invoices { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<OrderedProduct> OrderedProducts { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<ProductCategory> ProductCategories { get; set; }
+        public virtual DbSet<User> Users { get; set; }
     }
 }

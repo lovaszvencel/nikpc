@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface IBelepesKezelo
-    {
+    interface IPaymentHandler
+    { 
     }
 }

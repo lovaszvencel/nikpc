@@ -12,13 +12,24 @@ namespace Nikpc
     using System;
     using System.Collections.Generic;
     
-    public partial class Invoices
+    public partial class Order
     {
-        public int Id { get; set; }
-        public int OrderId { get; set; }
-        public System.DateTime Date { get; set; }
-        public int Total { get; set; }
+        public Order()
+        {
+            this.Invoices = new HashSet<Invoice>();
+            this.OrderedProducts = new HashSet<OrderedProduct>();
+        }
     
-        public virtual Orders Orders { get; set; }
+        public int Id { get; set; }
+        public System.DateTime Date { get; set; }
+        public int UserID { get; set; }
+        public int Total { get; set; }
+        public Nullable<bool> Delivery { get; set; }
+        public string DeliveryAddress { get; set; }
+        public string PaymentMethod { get; set; }
+    
+        public virtual ICollection<Invoice> Invoices { get; set; }
+        public virtual User User { get; set; }
+        public virtual ICollection<OrderedProduct> OrderedProducts { get; set; }
     }
 }
