@@ -8,7 +8,7 @@ namespace Nikpc.Interfaces
 {
     interface ILogInHandler
     {
-        bool Authentication(string username, string password);
+        bool LogInAuthentication(string username, string password);
         bool CrowdCheck();
     }
 }

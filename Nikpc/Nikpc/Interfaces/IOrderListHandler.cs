@@ -10,6 +10,6 @@ namespace Nikpc.Interfaces
     {
         Order SearchOrder(string fullname, int osszeg, Enums.PaymentMethod paymentMethod, List<Classes.Product> products);
         void DeleteOrder(Classes.Order order);
-        void SortOrder(string sortByParameter, bool ascending);
+        void SortOrders(string sortByParameter, bool ascending);
     }
 }

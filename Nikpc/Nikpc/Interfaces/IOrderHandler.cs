@@ -8,10 +8,10 @@ namespace Nikpc.Interfaces
 {
     interface IOrderHandler
     {
-        void ModifyPaymentMethod(Enums.PaymentMethod newPaymentMethod);
-        void EmptyCart();
+        void ModifyOrderPaymentMethod(Enums.PaymentMethod newPaymentMethod);
+        void EmptyOrderCart();
         void PlaceOrder(List<Classes.Product> cart, Enums.PaymentMethod paymentMethod);
-        void DeleteOrder(Classes.Order);
-        void ModifyProductQuantity(Classes.Product product, int newQuantity);
+        void DeleteOrder(Classes.Order order);
+        void ModifyOrderProductQuantity(Classes.Product product, int newQuantity);
     }
 }

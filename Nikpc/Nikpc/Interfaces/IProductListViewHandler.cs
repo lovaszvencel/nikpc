@@ -8,9 +8,9 @@ namespace Nikpc.Interfaces
 {
     interface IProductListViewHandler
     {
-        void SearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available);
-        void AddProductToCart(Classes.Product product);
-        void DeleteProductFromCart(Classes.Product product);
-        void SortProducts(string sortByParameter, bool ascending);
+        void ViewSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available);
+        void ListAddProductToCart(Classes.Product product);
+        void ListDeleteProductFromCart(Classes.Product product);
+        void ViewSortProducts(string sortByParameter, bool ascending);
     }
 }

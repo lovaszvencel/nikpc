@@ -8,8 +8,8 @@ namespace Nikpc.Interfaces
 {
     interface IProductListHandler
     {
-        void SearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available);
-        void SortProducts(string sortByParameter, bool ascending);
+        void AdminSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available);
+        void AdminSortProducts(string sortByParameter, bool ascending);
         void AddProduct(Classes.Product product);
     }
 }
