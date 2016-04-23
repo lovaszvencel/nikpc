@@ -8,13 +8,12 @@ namespace Nikpc.Classes
 {
     class ProductCategory
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public List<Product> Products { get; set; }
         public ProductCategory()
         {
             Products = new List<Product>();
         }
-        public int Id { get; set; }
-        public string Name { get; set; }
-
-        public List<Product> Products { get; set; }
     }
 }
