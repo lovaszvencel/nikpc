@@ -11,7 +11,7 @@
         <Button x:Name="enterButton" Content="Belépés" HorizontalAlignment="Left" Height="40" Margin="174,240,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="enterGuestButton" Content="Belépés vendégként" HorizontalAlignment="Left" Height="40" Margin="299,240,0,0" VerticalAlignment="Top" Width="120"/>
         <Button x:Name="regButton" Content="Regisztráció" HorizontalAlignment="Left" Height="40" Margin="237,285,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="exitButton" Content="Kilépés" HorizontalAlignment="Left" Height="40" Margin="237,330,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="exitButton" Content="Kilépés" HorizontalAlignment="Left" Height="40" Margin="237,330,0,0" VerticalAlignment="Top" Width="120" Click="exitButton_Click"/>
         <Label Content="NIKPC Kft." HorizontalAlignment="Center" Height="63" Margin="0,40,0,0" VerticalAlignment="Top" Width="236" FontSize="45" FontWeight="Bold"/>
 
     </Grid>

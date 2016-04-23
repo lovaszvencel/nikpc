@@ -23,5 +23,10 @@ namespace Nikpc.Windows
         {
             InitializeComponent();
         }
+
+        private void exitButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
