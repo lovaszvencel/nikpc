@@ -11,5 +11,7 @@ namespace Nikpc.Interfaces
         Order SearchOrder(string fullname, int osszeg, Enums.PaymentMethod paymentMethod, List<Classes.Product> products);
         void DeleteOrder(Classes.Order order);
         void SortOrders(string sortByParameter, bool ascending);
+        void ModifyOrder(Classes.Order oldOrder, Classes.Order newOrderData);
+
     }
 }
