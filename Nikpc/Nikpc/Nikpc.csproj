@@ -128,11 +128,17 @@
     <Compile Include="Windows\LogInWindow.xaml.cs">
       <DependentUpon>LogInWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ModifyingMyDataWindow.xaml.cs">
+      <DependentUpon>ModifyingMyDataWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ModifyingOrderListWindow.xaml.cs">
       <DependentUpon>ModifyingOrderListWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ModifyingProductListWindow.xaml.cs">
       <DependentUpon>ModifyingProductListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ModifyingUserDataWindow.xaml.cs">
+      <DependentUpon>ModifyingUserDataWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\ModifyingUserListWindow.xaml.cs">
       <DependentUpon>ModifyingUserListWindow.xaml</DependentUpon>
@@ -154,6 +160,9 @@
     </Compile>
     <Compile Include="Windows\ProductListWindow.xaml.cs">
       <DependentUpon>ProductListWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\RegistrationWindow.xaml.cs">
+      <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StatsWindow.xaml.cs">
       <DependentUpon>StatsWindow.xaml</DependentUpon>
@@ -200,6 +209,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Windows\ModifyingMyDataWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Windows\ModifyingOrderListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -207,6 +220,10 @@
     <Page Include="Windows\ModifyingProductListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ModifyingUserDataWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\ModifyingUserListWindow.xaml">
       <SubType>Designer</SubType>
@@ -235,6 +252,10 @@
     <Page Include="Windows\ProductListWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\RegistrationWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\StatsWindow.xaml">
       <SubType>Designer</SubType>
