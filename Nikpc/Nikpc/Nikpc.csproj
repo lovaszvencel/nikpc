@@ -83,6 +83,7 @@
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductCategory.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Enums\PaymentMethod.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
     </Compile>
@@ -181,7 +182,7 @@
     <Compile Include="Interfaces\IPaymentHandler.cs" />
     <Compile Include="Interfaces\IOrderListHandler.cs" />
     <Compile Include="Interfaces\IOrderHandler.cs" />
-    <Compile Include="Interfaces\IStatsLogHandler.cs" />
+    <Compile Include="Interfaces\ISystemFunctionHandler.cs" />
     <Compile Include="Interfaces\IInvoiceHandler.cs" />
     <Compile Include="Interfaces\IProductCategoryHandler.cs" />
     <Compile Include="Interfaces\IProductHandler.cs" />

@@ -13,7 +13,7 @@
         <Label x:Name="label1" Content="Ára:" HorizontalAlignment="Left" Height="26" Margin="180,51,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy" Content="Részletek:" HorizontalAlignment="Left" Height="26" Margin="180,82,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy1" Content="Elérhetőség:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
-        <Button x:Name="addToBasketButton" Content="Kosárba" HorizontalAlignment="Left" Height="40" Margin="227,227,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="addToCartButton" Content="Kosárba" HorizontalAlignment="Left" Height="40" Margin="227,227,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="productPriceLbl" Content="Label" HorizontalAlignment="Left" Height="26" Margin="273,51,0,0" VerticalAlignment="Top" Width="109"/>
         <Label x:Name="productDetailsLbl" Content="Label" HorizontalAlignment="Left" Height="89" Margin="273,82,0,0" VerticalAlignment="Top" Width="109"/>
         <Label x:Name="productAvailabilityLbl" Content="Label" HorizontalAlignment="Left" Height="26" Margin="273,176,0,0" VerticalAlignment="Top" Width="109"/>
