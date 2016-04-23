@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 namespace Nikpc.Interfaces
 {
     interface IPaymentHandler
-    { 
+    {
+        void PayOrder(Enums.PaymentMethod paymentMethod, Classes.Order order);
+        void InvoicingPayment(Classes.Order order);
     }
 }

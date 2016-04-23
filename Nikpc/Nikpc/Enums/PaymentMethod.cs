@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Nikpc.Interfaces
+namespace Nikpc.Enums
 {
-    interface IStatsLogHandler
-    { 
+    enum PaymentMethod
+    {
+        Card, Transfer, Cash
     }
 }

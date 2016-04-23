@@ -8,5 +8,7 @@ namespace Nikpc.Interfaces
 {
     interface IUserHandler
     {
+        void ModifyUser(Classes.User oldUser, Classes.User newUserData);
+        void DeleteUser(Classes.User user);
     }
 }
