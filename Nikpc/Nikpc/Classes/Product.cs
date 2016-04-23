@@ -23,6 +23,6 @@ namespace Nikpc.Classes
         {
             OrderedProducts = new List<OrderedProduct>();
         }
-    }
+    
     }
 }
