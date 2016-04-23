@@ -32,7 +32,16 @@ namespace Nikpc.Windows
 
         private void enterButton_Click(object sender, RoutedEventArgs e)
         {
-            
+            if (string.IsNullOrWhiteSpace(userNameTxt.Text) || string.IsNullOrWhiteSpace(passwordTxt.Text))
+            {
+                MessageBox.Show("Kérjük adja meg a felhasználónevét és jelszavát is!");
+            }
+            else
+            {
+                NIKPC_DatabaseDataSet DB = new NIKPC_DatabaseDataSet();
+                var user = DB.User.Single(x => x.Username == userNameTxt.Text);
+                MessageBox.Show(user.Password);
+            }
         }
 
         private void regButton_Click(object sender, RoutedEventArgs e)
