@@ -10,7 +10,7 @@ namespace Nikpc.Interfaces
     {
         void ModifyOrderPaymentMethod(Enums.PaymentMethod newPaymentMethod);
         void EmptyOrderCart();
-        void PlaceOrder(List<Classes.Product> cart, Enums.PaymentMethod paymentMethod);
+        void PlaceOrder(Classes.Cart cart, Enums.PaymentMethod paymentMethod);
         void DeleteOrder(Classes.Order order);
         void ModifyOrderProductQuantity(Classes.Product product, int newQuantity);
     }

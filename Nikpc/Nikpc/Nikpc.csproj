@@ -90,6 +90,10 @@
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Controllers\SystemFunctionController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Enums\PaymentMethod.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
