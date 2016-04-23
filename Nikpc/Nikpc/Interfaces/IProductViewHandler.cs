@@ -8,5 +8,25 @@ namespace Nikpc.Interfaces
 {
     interface IProductViewHandler
     { 
+        void AddRating(int value, string review)
+        {
+
+        }
+
+        void OpenImage(Classes.Product product)
+        {
+
+        }
+
+        void AddToCart(Classes.Product product)
+        {
+
+        }
+
+        void DeleteFromCart(Classes.Product product)
+        {
+
+        }
+
     }
 }

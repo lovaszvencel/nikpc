@@ -8,5 +8,6 @@ namespace Nikpc.Interfaces
 {
     interface IUserHandler
     {
+        
     }
 }

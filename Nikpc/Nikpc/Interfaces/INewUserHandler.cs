@@ -7,6 +7,15 @@ using System.Threading.Tasks;
 namespace Nikpc.Interfaces
 {
     interface INewUserHandler
-    { 
+    {
+        void DataCheck(string username, string password, string email)
+        {
+
+        }
+
+        void AddUser(Classes.User user)
+        {
+
+        }
     }
 }
