@@ -284,8 +284,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>NIKPC_DataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
     <None Include="NIKPC_DataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>NIKPC_DataModel.edmx</DependentUpon>
