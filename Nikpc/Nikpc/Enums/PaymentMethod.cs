@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Enums
 {
-    enum PaymentMethod
+    public enum PaymentMethod
     {
         Card, Transfer, Cash
     }

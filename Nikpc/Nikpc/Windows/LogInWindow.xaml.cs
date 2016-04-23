@@ -28,5 +28,16 @@ namespace Nikpc.Windows
         {
             this.Close();
         }
+
+        private void enterButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void regButton_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrationWindow rw = new RegistrationWindow();
+            rw.Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class SystemFunctionController: Interfaces.ISystemFunctionHandler
+    public class SystemFunctionController: ISystemFunctionHandler
     {
-        public static List<Classes.Product> ChooseProductsOnSale()
+        public List<Classes.Product> ChooseProductsOnSale()
         {
             throw new NotImplementedException();
         }
 
-        public static void ViewLog()
+        public void ViewLog()
         {
             throw new NotImplementedException();
         }
 
-        public static void ViewStats()
+        public void ViewStats()
         {
             throw new NotImplementedException();
         }
 
-        public static void SetStatsToDefault()
+        public void SetStatsToDefault()
         {
             throw new NotImplementedException();
         }

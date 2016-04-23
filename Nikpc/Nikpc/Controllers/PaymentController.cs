@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class PaymentController : Interfaces.IPaymentHandler, Interfaces.IInvoiceHandler
+    public class PaymentController : IPaymentHandler, IInvoiceHandler
     {
-        public static void PayOrder(Enums.PaymentMethod paymentMethod, Classes.Order order)
+        public void PayOrder(Enums.PaymentMethod paymentMethod, Classes.Order order)
         {
             throw new NotImplementedException();
         }
 
-        public static void InvoicingPayment(Classes.Order order)
+        public void InvoicingPayment(Classes.Order order)
         {
             throw new NotImplementedException();
         }
 
-        public static void SendInvoice(Classes.Invoice invoice, string email)
+        public void SendInvoice(Classes.Invoice invoice, string email)
         {
             throw new NotImplementedException();
         }
 
-        public static void PrintInvoice(Classes.Invoice invoice)
+        public void PrintInvoice(Classes.Invoice invoice)
         {
             throw new NotImplementedException();
         }

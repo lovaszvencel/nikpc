@@ -4,13 +4,13 @@
         Title="Regisztráció" Height="600" Width="600" Background="#FFB2D3CD">
     <Grid>
         <Label Content="Üdvözöljük!" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox x:Name="userNameTxt" HorizontalAlignment="Right" Height="30" Margin="0,120,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="passwordTxt" HorizontalAlignment="Right" Height="30" Margin="0,170,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="passwordAgainTxt" HorizontalAlignment="Right" Height="30" Margin="0,220,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="nameTxt" HorizontalAlignment="Right" Height="30" Margin="0,270,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="emailTxt" HorizontalAlignment="Right" Height="30" Margin="0,320,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="phoneTxt" HorizontalAlignment="Right" Height="30" Margin="0,370,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="addressTxt" HorizontalAlignment="Right" Height="30" Margin="0,420,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="userNameTxt" HorizontalAlignment="Right" Height="30" Margin="0,120,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="passwordTxt" HorizontalAlignment="Right" Height="30" Margin="0,170,70,0" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
+        <PasswordBox x:Name="passwordAgainTxt" HorizontalAlignment="Right" Height="30" Margin="0,220,70,0" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="nameTxt" HorizontalAlignment="Right" Height="30" Margin="0,270,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="emailTxt" HorizontalAlignment="Right" Height="30" Margin="0,320,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="phoneTxt" HorizontalAlignment="Right" Height="30" Margin="0,370,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="addressTxt" HorizontalAlignment="Right" Height="30" Margin="0,420,70,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300" VerticalContentAlignment="Center"/>
         <Label Content="Felhasználónév *" HorizontalAlignment="Left" Margin="80,120,0,0" VerticalAlignment="Top" Height="30"/>
         <Label Content="Jelszó *" HorizontalAlignment="Left" Margin="80,170,0,0" VerticalAlignment="Top" Height="30"/>
         <Label Content="Jelszó megerősítése *" HorizontalAlignment="Left" Margin="80,220,0,0" VerticalAlignment="Top" Height="30"/>
@@ -18,7 +18,7 @@
         <Label Content="E-mail cím *" HorizontalAlignment="Left" Margin="80,320,0,0" VerticalAlignment="Top" Height="30"/>
         <Label Content="Telefonszám" HorizontalAlignment="Left" Margin="80,370,0,0" VerticalAlignment="Top" Height="30"/>
         <Label Content="Kiszállítási cím" HorizontalAlignment="Left" Margin="80,420,0,0" VerticalAlignment="Top" Height="30"/>
-        <Button x:Name="RegisterButton"  Content="Regisztráció" HorizontalAlignment="Left" Margin="120,470,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
+        <Button x:Name="RegisterButton"  Content="Regisztráció" HorizontalAlignment="Left" Margin="120,470,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="RegisterButton_Click"/>
         <Button x:Name="cancelButton" Content="Mégsem" HorizontalAlignment="Right" Margin="0,470,120,0" VerticalAlignment="Top" Width="150" IsCancel="True" Height="30"/>
         <Label Content="* A csillaggal jelölt mezők kitöltése kötelező!" HorizontalAlignment="Left" Margin="10,530,0,0" VerticalAlignment="Top" Width="300"/>
     </Grid>

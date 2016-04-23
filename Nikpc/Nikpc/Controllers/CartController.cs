@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,45 +7,45 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class CartController : Interfaces.IProductViewHandler, Interfaces.IProductListViewHandler
+    public class CartController : IProductViewHandler, IProductListViewHandler
     {
 
-        public static void AddProductRating(int value, string review)
+        public void AddProductRating(int value, string review)
         {
             throw new NotImplementedException();
         }
 
-        public static void OpenProductImage(Classes.Product product)
+        public void OpenProductImage(Classes.Product product)
         {
             throw new NotImplementedException();
         }
 
-        public static void AddProductToCart(Classes.Product product)
+        public void AddProductToCart(Classes.Product product)
         {
             throw new NotImplementedException();
         }
 
-        public static void DeleteProductFromCart(Classes.Product product)
+        public void DeleteProductFromCart(Classes.Product product)
         {
             throw new NotImplementedException();
         }
 
-        public static void ViewSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available)
+        public void ViewSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
             throw new NotImplementedException();
         }
 
-        public static void ListAddProductToCart(Classes.Product product)
+        public void ListAddProductToCart(Classes.Product product)
         {
             throw new NotImplementedException();
         }
 
-        public static void ListDeleteProductFromCart(Classes.Product product)
+        public void ListDeleteProductFromCart(Classes.Product product)
         {
             throw new NotImplementedException();
         }
 
-        public static void ViewSortProducts(string sortByParameter, bool ascending)
+        public void ViewSortProducts(string sortByParameter, bool ascending)
         {
             throw new NotImplementedException();
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,39 +7,39 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class UserController : Interfaces.IDataHandler, Interfaces.ILogInHandler, Interfaces.INewUserHandler
+    public class UserController : IDataHandler, ILogInHandler, INewUserHandler
     {
-        public static void ModifyMyAddress(string newAddress)
+        public void ModifyMyAddress(string newAddress)
         {
             throw new NotImplementedException();
         }
 
-        public static void ModifyMyEmail(string newEmail)
+        public void ModifyMyEmail(string newEmail)
         {
             throw new NotImplementedException();
         }
 
-        public static void ModifyMyPassword(string newPassword)
+        public void ModifyMyPassword(string newPassword)
         {
             throw new NotImplementedException();
         }
 
-        public static bool LogInAuthentication(string username, string password)
+        public bool LogInAuthentication(string username, string password)
         {
             throw new NotImplementedException();
         }
 
-        public static bool CrowdCheck()
+        public bool CrowdCheck()
         {
             throw new NotImplementedException();
         }
 
-        public static void UserDataCheck(string username, string password, string email)
+        public void UserDataCheck(string username, string password, string email)
         {
             throw new NotImplementedException();
         }
 
-        public static void AddUser(Classes.User user)
+        public void AddUser(Classes.User user)
         {
             throw new NotImplementedException();
         }

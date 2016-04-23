@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,35 +7,35 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class ProductAdministrationController: Interfaces.IProductHandler, Interfaces.IProductListHandler
+    public class ProductAdministrationController: IProductHandler, IProductListHandler
     {
 
-        public static void ModifyProduct(Classes.Product oldProduct, Classes.Product newProductData)
+        public void ModifyProduct(Classes.Product oldProduct, Classes.Product newProductData)
         {
             throw new NotImplementedException();
         }
 
-        public static void DeleteProduct(Classes.Product product)
+        public void DeleteProduct(Classes.Product product)
         {
             throw new NotImplementedException();
         }
 
-        public static bool ReserveProduct(Classes.Product product, int quantity)
+        public bool ReserveProduct(Classes.Product product, int quantity)
         {
             throw new NotImplementedException();
         }
 
-        public static void AdminSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available)
+        public void AdminSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
             throw new NotImplementedException();
         }
 
-        public static void AdminSortProducts(string sortByParameter, bool ascending)
+        public void AdminSortProducts(string sortByParameter, bool ascending)
         {
             throw new NotImplementedException();
         }
 
-        public static void AddProduct(Classes.Product product)
+        public void AddProduct(Classes.Product product)
         {
             throw new NotImplementedException();
         }

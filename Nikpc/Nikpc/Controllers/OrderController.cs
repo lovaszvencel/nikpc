@@ -1,49 +1,57 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Nikpc.Classes;
+using Nikpc.Enums;
 
 namespace Nikpc.Controllers
 {
-    public class OrderController : Interfaces.IOrderHandler, Interfaces.IOrderListHandler
+    public class OrderController : IOrderHandler, IOrderListHandler
     {
-        public static void ModifyOrderPaymentMethod(Enums.PaymentMethod newPaymentMethod)
+        public void ModifyOrderPaymentMethod(Enums.PaymentMethod newPaymentMethod)
         {
             throw new NotImplementedException();
         }
 
-        public static void EmptyOrderCart()
+        public void EmptyOrderCart()
         {
             throw new NotImplementedException();
         }
 
-        public static void PlaceOrder(List<Classes.Product> cart, Enums.PaymentMethod paymentMethod)
+        public void PlaceOrder(List<Classes.Product> cart, Enums.PaymentMethod paymentMethod)
         {
             throw new NotImplementedException();
         }
 
-        public static void DeleteOrder(Classes.Order order)
+        public void DeleteOrder(Classes.Order order)
         {
             throw new NotImplementedException();
         }
 
-        public static void ModifyOrderProductQuantity(Classes.Product product, int newQuantity)
+        public void ModifyOrderProductQuantity(Classes.Product product, int newQuantity)
         {
             throw new NotImplementedException();
         }
 
-        public static Order SearchOrder(string fullname, int osszeg, Enums.PaymentMethod paymentMethod, List<Classes.Product> products)
+        public Order SearchOrder(string fullname, int osszeg, Enums.PaymentMethod paymentMethod, List<Classes.Product> products)
         {
             throw new NotImplementedException();
         }
 
-        public static void SortOrders(string sortByParameter, bool ascending)
+        public void SortOrders(string sortByParameter, bool ascending)
         {
             throw new NotImplementedException();
         }
         
-        public static void ModifyOrder(Classes.Order oldOrder, Classes.Order newOrderData)
+        public void ModifyOrder(Classes.Order oldOrder, Classes.Order newOrderData)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void PlaceOrder(Cart cart, PaymentMethod paymentMethod)
         {
             throw new NotImplementedException();
         }
