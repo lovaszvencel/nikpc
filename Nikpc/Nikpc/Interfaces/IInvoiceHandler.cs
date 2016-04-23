@@ -10,5 +10,6 @@ namespace Nikpc.Interfaces
     {
         void SendInvoice(Classes.Invoice invoice, string email);
         void PrintInvoice(Classes.Invoice invoice);
+        void InvoicingPayment(Classes.Order order);
     }
 }

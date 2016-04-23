@@ -77,12 +77,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Cart.cs" />
     <Compile Include="Classes\Invoice.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\OrderedProduct.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductCategory.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\PaymentController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Enums\PaymentMethod.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
