@@ -80,6 +80,8 @@
     <Compile Include="Classes\Invoice.cs" />
     <Compile Include="Classes\Order.cs" />
     <Compile Include="Classes\OrderedProduct.cs" />
+    <Compile Include="Classes\Product.cs" />
+    <Compile Include="Classes\ProductCategory.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Invoice.cs">
       <DependentUpon>NIKPC_DataModel.tt</DependentUpon>
