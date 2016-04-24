@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -20,9 +21,11 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class LogInWindow : Window
     {
+        UserController uc;
         public LogInWindow()
         {
             InitializeComponent();
+            uc = new UserController();
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
@@ -32,20 +35,23 @@ namespace Nikpc.Windows
 
         private void enterButton_Click(object sender, RoutedEventArgs e)
         {
-            MySql.Data.MySqlClient.MySqlConnection conn;
-            string myConnectionString = "server=pharmindex.hu;uid=NIKadmin;" + "pwd=NIKpassword;database=nikpc;";;
-            try
+            User user = uc.LogInAuthentication(userNameTxt.Text, passwordTxt.Password);
+            if (user != null)
             {
-                conn = new MySql.Data.MySqlClient.MySqlConnection();
-                conn.ConnectionString = myConnectionString;
-                conn.Open();
+                ProductListWindow plw = new ProductListWindow(user);
+                plw.Show();
+                this.Close();
             }
-            catch (MySql.Data.MySqlClient.MySqlException ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                if (MessageBoxResult.Yes == MessageBox.Show("Sikertelen bejelentkezés!\nBelép vendégként?", "Sikertelen", MessageBoxButton.YesNo))
+                {
+                    ProductListWindow plw = new ProductListWindow(null);
+                    plw.Show();
+                    this.Close();
+                }
             }
 
-            
         }
 
         private void regButton_Click(object sender, RoutedEventArgs e)

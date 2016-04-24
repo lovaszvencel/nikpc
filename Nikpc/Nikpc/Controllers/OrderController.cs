@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Nikpc.Classes;
 using Nikpc.Enums;
+using Nikpc.Classes;
 
 namespace Nikpc.Controllers
 {
     public class OrderController : IOrderHandler, IOrderListHandler
     {
-        public void ModifyOrderPaymentMethod(Enums.PaymentMethod newPaymentMethod)
+        public void ModifyOrderPaymentMethod(PaymentMethod newPaymentMethod)
         {
             throw new NotImplementedException();
         }
@@ -21,22 +21,22 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void PlaceOrder(List<Classes.Product> cart, Enums.PaymentMethod paymentMethod)
+        public void PlaceOrder(List<Product> cart, PaymentMethod paymentMethod)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteOrder(Classes.Order order)
+        public void DeleteOrder(Order order)
         {
             throw new NotImplementedException();
         }
 
-        public void ModifyOrderProductQuantity(Classes.Product product, int newQuantity)
+        public void ModifyOrderProductQuantity(Product product, int newQuantity)
         {
             throw new NotImplementedException();
         }
 
-        public Order SearchOrder(string fullname, int osszeg, Enums.PaymentMethod paymentMethod, List<Classes.Product> products)
+        public Order SearchOrder(string fullname, int osszeg, PaymentMethod paymentMethod, List<Product> products)
         {
             throw new NotImplementedException();
         }
@@ -46,7 +46,7 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
         
-        public void ModifyOrder(Classes.Order oldOrder, Classes.Order newOrderData)
+        public void ModifyOrder(Order oldOrder, Order newOrderData)
         {
             throw new NotImplementedException();
         }

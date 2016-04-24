@@ -89,12 +89,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Cart.cs" />
-    <Compile Include="Classes\Invoice.cs" />
-    <Compile Include="Classes\Order.cs" />
-    <Compile Include="Classes\OrderedProduct.cs" />
-    <Compile Include="Classes\Product.cs" />
-    <Compile Include="Classes\ProductCategory.cs" />
-    <Compile Include="Classes\User.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductAdministrationController.cs" />
@@ -190,7 +184,7 @@
     <Compile Include="Windows\StatsWindow.xaml.cs">
       <DependentUpon>StatsWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -212,7 +206,7 @@
     <Compile Include="Interfaces\IProductListViewHandler.cs" />
     <Compile Include="Interfaces\IProductViewHandler.cs" />
     <Compile Include="Interfaces\INewUserHandler.cs" />
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>

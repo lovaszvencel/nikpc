@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class AdminController : INewUserHandler, IUserHandler
+    public class AdminController : /*INewUserHandler,*/ IUserHandler
     {
         public void UserDataCheck(string username, string password, string email)
         {
             throw new NotImplementedException();
         }
 
-        public void AddUser(Classes.User user)
+        public void AddUser(User user)
         {
             throw new NotImplementedException();
         }
 
-        public  void ModifyUser(Classes.User oldUser, Classes.User newUserData)
+        public  void ModifyUser(User oldUser, User newUserData)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteUser(Classes.User user)
+        public void DeleteUser(User user)
         {
             throw new NotImplementedException();
         }

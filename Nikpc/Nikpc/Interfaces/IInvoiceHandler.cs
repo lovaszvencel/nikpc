@@ -8,8 +8,8 @@ namespace Nikpc.Interfaces
 {
     interface IInvoiceHandler
     {
-        void SendInvoice(Classes.Invoice invoice, string email);
-        void PrintInvoice(Classes.Invoice invoice);
-        void InvoicingPayment(Classes.Order order);
+        void SendInvoice(Invoice invoice, string email);
+        void PrintInvoice(Invoice invoice);
+        void InvoicingPayment(Order order);
     }
 }

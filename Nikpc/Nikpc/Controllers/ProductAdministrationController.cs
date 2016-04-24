@@ -1,5 +1,4 @@
-﻿using Nikpc.Classes;
-using Nikpc.Interfaces;
+﻿using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,22 +10,22 @@ namespace Nikpc.Controllers
     public class ProductAdministrationController: IProductHandler, IProductListHandler
     {
 
-        public void ModifyProduct(Classes.Product oldProduct, Classes.Product newProductData)
+        public void ModifyProduct(Product oldProduct, Product newProductData)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteProduct(Classes.Product product)
+        public void DeleteProduct(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public bool ReserveProduct(Classes.Product product, int quantity)
+        public bool ReserveProduct(Product product, int quantity)
         {
             throw new NotImplementedException();
         }
 
-        public void AdminSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available)
+        public void AdminSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
             throw new NotImplementedException();
         }
@@ -36,7 +35,7 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void AddProduct(Classes.Product product)
+        public void AddProduct(Product product)
         {
             throw new NotImplementedException();
         }
@@ -51,7 +50,7 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public static void ModifyStock(Classes.Product product, int quantity)
+        public static void ModifyStock(Product product, int quantity)
         {
             throw new NotImplementedException();
         }

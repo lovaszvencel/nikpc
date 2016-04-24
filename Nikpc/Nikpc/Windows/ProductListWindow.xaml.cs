@@ -19,8 +19,10 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class ProductListWindow : Window
     {
-        public ProductListWindow()
+        User user; // ha vendég, akkor ez null, különben objektum
+        public ProductListWindow(User user)
         {
+            this.user = user;
             InitializeComponent();
         }
     }

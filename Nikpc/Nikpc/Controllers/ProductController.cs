@@ -9,17 +9,17 @@ namespace Nikpc.Controllers
 {
     class ProductController : IProductListViewHandler, IProductViewHandler
     {
-        public void ViewSearchProduct(string productName, Classes.ProductCategory productCategory, int priceFrom, int priceTo, bool available)
+        public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
             throw new NotImplementedException();
         }
 
-        public void ListAddProductToCart(Classes.Product product)
+        public void ListAddProductToCart(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public void ListDeleteProductFromCart(Classes.Product product)
+        public void ListDeleteProductFromCart(Product product)
         {
             throw new NotImplementedException();
         }
@@ -34,17 +34,17 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void OpenProductImage(Classes.Product product)
+        public void OpenProductImage(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public void AddProductToCart(Classes.Product product)
+        public void AddProductToCart(Product product)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteProductFromCart(Classes.Product product)
+        public void DeleteProductFromCart(Product product)
         {
             throw new NotImplementedException();
         }
@@ -54,7 +54,7 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public static void ReserveProduct(Classes.Product product)
+        public static void ReserveProduct(Product product)
         {
             throw new NotImplementedException();
         }
