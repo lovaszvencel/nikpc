@@ -32,6 +32,19 @@ namespace Nikpc.Windows
 
         private void enterButton_Click(object sender, RoutedEventArgs e)
         {
+            MySql.Data.MySqlClient.MySqlConnection conn;
+            string myConnectionString = "server=pharmindex.hu;uid=NIKadmin;" + "pwd=NIKpassword;database=nikpc;";;
+            try
+            {
+                conn = new MySql.Data.MySqlClient.MySqlConnection();
+                conn.ConnectionString = myConnectionString;
+                conn.Open();
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
             
         }
 
