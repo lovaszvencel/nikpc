@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Nikpc.Interfaces
 {
     interface IPaymentHandler
     {
-        void PayOrder(Enums.PaymentMethod paymentMethod, Classes.Order order);
+        void PayOrder(PaymentMethod paymentMethod, Order order);
     }
 }

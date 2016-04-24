@@ -9,6 +9,8 @@ namespace Nikpc.Controllers
 {
     public class UserController : IDataHandler, ILogInHandler, INewUserHandler
     {
+        nikpcEntities1 db = new nikpcEntities1();
+
         public void ModifyMyAddress(string newAddress)
         {
             throw new NotImplementedException();
@@ -24,9 +26,17 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public bool LogInAuthentication(string username, string password)
+        //TODO kiegészíteni a specifikációt, hogy User obj-t adjon vissza (hívás oldalon kell a típusa)
+        public User LogInAuthentication(string username, string password)
         {
-            throw new NotImplementedException();
+            var user = from akt in db.User
+                       where akt.Username == username && akt.Password == password
+                       select akt;
+
+            if (user.Count() == 1)
+                return user.First();
+            return null;
+
         }
 
         public bool CrowdCheck()
@@ -39,26 +49,10 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void AddUser(Classes.User user)
+        public void AddUser(User user)
         {
-            throw new NotImplementedException();
+            db.User.Add(user);
+            db.SaveChanges();
         }
-
-        public static void LogIn() //Vendégként
-        {
-            throw new NotImplementedException();
-        }
-        
-        public static void LogIn(string username, string password)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static bool Register(Classes.User user)
-        {
-            throw new NotImplementedException();
-        }
-
-
     }
 }

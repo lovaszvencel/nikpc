@@ -8,8 +8,8 @@ namespace Nikpc.Interfaces
 {
     interface IProductHandler
     {
-        void ModifyProduct(Classes.Product oldProduct, Classes.Product newProductData);
-        void DeleteProduct(Classes.Product product);
-        bool ReserveProduct(Classes.Product product, int quantity);
+        void ModifyProduct(Product oldProduct, Product newProductData);
+        void DeleteProduct(Product product);
+        bool ReserveProduct(Product product, int quantity);
     }
 }

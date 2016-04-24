@@ -9,7 +9,7 @@ namespace Nikpc.Controllers
 {
     public class ProductCategoryController : IProductCategoryHandler
     {
-        public void AddCategory(string name, List<Classes.Product> products)
+        public void AddCategory(string name, List<Product> products)
         {
             throw new NotImplementedException();
         }
@@ -19,17 +19,17 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void DeleteCategory(Classes.ProductCategory category)
+        public void DeleteCategory(ProductCategory category)
         {
             throw new NotImplementedException();
         }
 
-        public void AddProductsToCategory(List<Classes.Product> products)
+        public void AddProductsToCategory(List<Product> products)
         {
             throw new NotImplementedException();
         }
 
-        public void DeleteProductsFromCategory(List<Classes.Product> products)
+        public void DeleteProductsFromCategory(List<Product> products)
         {
             throw new NotImplementedException();
         }

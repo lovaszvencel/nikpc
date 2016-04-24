@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class InvoiceController : Interfaces.IInvoiceHandler
+    public class InvoiceController : IInvoiceHandler
     {
-        public void SendInvoice(Classes.Invoice invoice, string email)
+        public void SendInvoice(Invoice invoice, string email)
         {
             throw new NotImplementedException();
         }
 
-        public void PrintInvoice(Classes.Invoice invoice)
+        public void PrintInvoice(Invoice invoice)
         {
             throw new NotImplementedException();
         }
 
-        public void InvoicingPayment(Classes.Order order)
+        public void InvoicingPayment(Order order)
         {
             throw new NotImplementedException();
         }

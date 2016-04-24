@@ -1,4 +1,4 @@
-﻿using Nikpc.Classes;
+﻿using Nikpc.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +9,10 @@ namespace Nikpc.Interfaces
 {
     interface IOrderListHandler
     {
-        Order SearchOrder(string fullname, int osszeg, Enums.PaymentMethod paymentMethod, List<Classes.Product> products);
-        void DeleteOrder(Classes.Order order);
+        Order SearchOrder(string fullname, int osszeg, PaymentMethod paymentMethod, List<Product> products);
+        void DeleteOrder(Order order);
         void SortOrders(string sortByParameter, bool ascending);
-        void ModifyOrder(Classes.Order oldOrder, Classes.Order newOrderData);
+        void ModifyOrder(Order oldOrder, Order newOrderData);
 
     }
 }

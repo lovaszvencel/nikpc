@@ -8,7 +8,7 @@ namespace Nikpc.Interfaces
 {
     interface ISystemFunctionHandler
     {
-        List<Classes.Product> ChooseProductsOnSale();
+        List<Product> ChooseProductsOnSale();
         void ViewLog();
         void ViewStats();
         void SetStatsToDefault();

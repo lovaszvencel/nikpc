@@ -9,7 +9,7 @@ namespace Nikpc.Controllers
 {
     public class SystemFunctionController: ISystemFunctionHandler
     {
-        public List<Classes.Product> ChooseProductsOnSale()
+        public List<Product> ChooseProductsOnSale()
         {
             throw new NotImplementedException();
         }

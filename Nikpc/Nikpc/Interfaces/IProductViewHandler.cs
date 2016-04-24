@@ -9,8 +9,8 @@ namespace Nikpc.Interfaces
     interface IProductViewHandler
     {
         void AddProductRating(int value, string review);
-        void OpenProductImage(Classes.Product product);
-        void AddProductToCart(Classes.Product product);
-        void DeleteProductFromCart(Classes.Product product);
+        void OpenProductImage(Product product);
+        void AddProductToCart(Product product);
+        void DeleteProductFromCart(Product product);
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Nikpc.Classes;
+using Nikpc.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +10,10 @@ namespace Nikpc.Interfaces
 {
     interface IOrderHandler
     {
-        void ModifyOrderPaymentMethod(Enums.PaymentMethod newPaymentMethod);
+        void ModifyOrderPaymentMethod(PaymentMethod newPaymentMethod);
         void EmptyOrderCart();
-        void PlaceOrder(Classes.Cart cart, Enums.PaymentMethod paymentMethod);
-        void DeleteOrder(Classes.Order order);
-        void ModifyOrderProductQuantity(Classes.Product product, int newQuantity);
+        void PlaceOrder(Cart cart, PaymentMethod paymentMethod);
+        void DeleteOrder(Order order);
+        void ModifyOrderProductQuantity(Product product, int newQuantity);
     }
 }
