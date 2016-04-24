@@ -1,4 +1,5 @@
-﻿using Nikpc.Interfaces;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
