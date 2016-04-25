@@ -25,13 +25,13 @@ namespace Nikpc.Windows
         nikpcEntities1 db = new nikpcEntities1();
         int? fullPrice;
 
-        public PaymentWindow()
+        public PaymentWindow(Object price)
         {
             pc = new ProductController();
             cc = new CartController();
             Init();
             InitializeComponent();
-            this.DataContext = fullPrice;
+            this.DataContext = price.ToString();
             chosenProductList.DataContext = cc;
         }
 
