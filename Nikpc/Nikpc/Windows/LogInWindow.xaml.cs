@@ -26,13 +26,20 @@ namespace Nikpc.Windows
         public LogInWindow()
         {
             InitializeComponent();
-            var product = from i in db.Product
-                          select i;
-            foreach (var i in product)
-                ProductController.productList.Add(i);
-
+            Feltolt();
             uc = new UserController();
             
+        }
+
+        private void Feltolt()
+        {
+            var products = from akt in db.Product
+                           select akt;
+            foreach (var item in products)
+            {
+                ProductController.AllProducts.Add(item);
+                ProductController.FilteredProducts.Add(item);
+            }
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
@@ -72,6 +79,7 @@ namespace Nikpc.Windows
                 if (MessageBoxResult.Yes == MessageBox.Show("Sikertelen bejelentkezés!\nBelép vendégként?", "Sikertelen", MessageBoxButton.YesNo))
                 {
                     ProductListWindow plw = new ProductListWindow();
+                    plw.dataButton.Visibility = System.Windows.Visibility.Hidden;
                     plw.Show();
                     this.Close();
                 }
@@ -87,6 +95,7 @@ namespace Nikpc.Windows
         private void enterAsQuestClick(object sender, RoutedEventArgs e)
         {
             ProductListWindow plw = new ProductListWindow();
+            plw.dataButton.Visibility = System.Windows.Visibility.Hidden;
             plw.Show();
             this.Close();
         }

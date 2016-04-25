@@ -1,4 +1,5 @@
-﻿using Nikpc.Interfaces;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,14 +9,21 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    class ProductController : IProductListViewHandler, IProductViewHandler
+    class ProductController : Bindable, IProductListViewHandler, IProductViewHandler
     {
-        public static ObservableCollection<Product> productList = new ObservableCollection<Product>();
-        public static ObservableCollection<ProductCategory> categoryList = new ObservableCollection<ProductCategory>();
+        public static ObservableCollection<Product> AllProducts = new ObservableCollection<Product>();
+        public static ObservableCollection<Product> FilteredProducts = new ObservableCollection<Product>();
+        public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();        
 
-        public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
+        public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo)
         {
-            throw new NotImplementedException();
+            FilteredProducts = new ObservableCollection<Product>();
+            foreach (Product p in AllProducts)
+            {
+                if ((p.Name.Contains(productName) || productName == "") && (productCategory == null || p.CategoryID == productCategory.Id) && (p.Price > priceFrom) && (p.Price < priceTo || priceTo == 0))
+                    FilteredProducts.Add(p);
+            }
+            //OnPropertyChanged(typeof(ProductController), "FilteredProducts");
         }
         
         public void ViewSortProducts(string sortByParameter, bool ascending)

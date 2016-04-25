@@ -17,20 +17,24 @@ namespace Nikpc.Windows
 {
     public partial class ProductListWindow : Window
     {
-        ProductAdministrationController pac;
+        ProductController pc;
         //UserControllerben egy static currentUser van helyette
         public ProductListWindow()
         {
             //UserController.currentUser = user; --> megcsinálja a loginwindowban
-            pac = new ProductAdministrationController();
             InitializeComponent();
-            productList.DataContext = pac; 
+            pc = new ProductController();
         }
 
         private void DataClick(object sender, RoutedEventArgs e)
         {
             ModifyingMyDataWindow mmdw = new ModifyingMyDataWindow();
             mmdw.Show();
+        }
+
+        private void SearchClick(object sender, RoutedEventArgs e)
+        {
+            pc.ViewSearchProduct(searchTxt.Text, categoryCB.SelectedItem as ProductCategory, priceFromTxt.Text==""?0:int.Parse(priceFromTxt.Text), priceToTxt.Text==""?0:int.Parse(priceToTxt.Text));
         }
     }
 }
