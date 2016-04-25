@@ -6,7 +6,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.ComponentModel.DataAnnotations;
 namespace Nikpc.Controllers
 {
     public class UserController : ILogInHandler, INewUserHandler
@@ -33,9 +33,18 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void UserDataCheck(string username, string password, string email)
+        public string UserDataCheck(string username, string email)
         {
-            throw new NotImplementedException();
+            bool van = false;
+            for (int i = 0; i < AllUsers.Count && !van; i++)
+            {
+                van = (username == AllUsers[i].Username);
+            }
+            if (van)
+                return "Már foglalt ez a felhasználónév!";
+            else if (!(new EmailAddressAttribute().IsValid(email)))
+                return "Nem megfelelő email formátum";
+            return "";
         }
 
         public void AddUser(User user)
