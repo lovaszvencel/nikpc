@@ -42,8 +42,7 @@ namespace Nikpc.Windows
             }
             else
             {
-                //todo add to cart
-                this.product.Stock--;
+                pc.AddProductToCart(this.product);
                 MessageBox.Show("Kosárhoz adva!");
                 Close();
             }

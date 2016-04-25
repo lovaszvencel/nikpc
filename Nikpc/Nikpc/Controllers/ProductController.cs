@@ -13,6 +13,8 @@ namespace Nikpc.Controllers
         public static ObservableCollection<Product> productList = new ObservableCollection<Product>();
         public static ObservableCollection<ProductCategory> categoryList = new ObservableCollection<ProductCategory>();
 
+        nikpcEntities1 db = new nikpcEntities1();
+
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
             throw new NotImplementedException();
@@ -35,13 +37,18 @@ namespace Nikpc.Controllers
 
         public void AddProductToCart(Product product)
         {
-            int i = 0;
+
+            // db.Product.Find(product.Id).Stock = product.Stock - 1;
+            db.Product.Find(product.Id).Stock = db.Product.Find(product.Id).Stock - 1;
+            UserController.currentUser.Cart.Add(new ProductInCart(product));
+
+            /*int i = 0;
             while (i < UserController.currentUser.Cart.Count && !UserController.currentUser.Cart[i].Product.Equals(product))
                 i++;
             if (i < UserController.currentUser.Cart.Count)
                 UserController.currentUser.Cart[i].Quantity++;
             else
-                UserController.currentUser.Cart.Add(new ProductInCart(product));
+                UserController.currentUser.Cart.Add(new ProductInCart(product));*/
         }
         
         public static int GetStock()
