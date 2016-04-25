@@ -23,7 +23,6 @@ namespace Nikpc.Controllers
                 if ((p.Name.ToLower().Contains(productName.ToLower()) || productName == "") && (productCategory == null || p.CategoryID == productCategory.Id) && (p.Price > priceFrom) && (p.Price < priceTo || priceTo == 0))
                     FilteredProducts.Add(p);
             }
-            //OnPropertyChanged(typeof(ProductController), "FilteredProducts");
         }
         
         public void ViewSortProducts(string sortByParameter, bool ascending)
