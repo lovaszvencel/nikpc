@@ -22,15 +22,16 @@ namespace Nikpc.Windows
     public partial class LogInWindow : Window
     {
         UserController uc;
-        nikpcEntities1 db = new nikpcEntities1();
+        nikpcEntities1 db;
         public LogInWindow()
         {
             InitializeComponent();
-            Feltolt();
+            db = new nikpcEntities1();
+            Task.Run(() => TermekFeltolt()).ContinueWith(x => KategoriaFeltolt());
             uc = new UserController();
         }
 
-        private void Feltolt()
+        private void TermekFeltolt()
         {
             var products = from akt in db.Product
                            select akt;
@@ -39,6 +40,10 @@ namespace Nikpc.Windows
                 ProductController.AllProducts.Add(item);
                 ProductController.FilteredProducts.Add(item);
             }
+        }
+
+        private void KategoriaFeltolt()
+        {
             var category = from i in db.ProductCategory
                            select i;
             foreach (var i in category)

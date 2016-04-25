@@ -21,15 +21,18 @@ namespace Nikpc.Windows
     public partial class PaymentWindow : Window
     {
         ProductController pc;
+        CartController cc;
         nikpcEntities1 db = new nikpcEntities1();
         int? fullPrice;
 
-        public PaymentWindow()
+        public PaymentWindow(Object price)
         {
-            InitializeComponent();
-            Init();
             pc = new ProductController();
-            chosenProductList.DataContext = UserController.currentUser.Cart;
+            cc = new CartController();
+            Init();
+            InitializeComponent();
+            this.DataContext = price.ToString();
+            chosenProductList.DataContext = cc;
         }
 
         private void Init()

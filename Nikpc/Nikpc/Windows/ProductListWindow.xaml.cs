@@ -43,5 +43,11 @@ namespace Nikpc.Windows
             ProductInfo piw = new ProductInfo((Product)productList.SelectedItem);
             piw.Show();
         }
+
+        private void orderButton_Click(object sender, RoutedEventArgs e)
+        {
+            OrderPlacementWindow opw = new OrderPlacementWindow();
+            opw.Show();
+        }
     }
 }

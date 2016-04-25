@@ -10,14 +10,14 @@
     <Grid>
         <Label x:Name="label" Content="Megrendelés véglegesítése" HorizontalAlignment="Center" Height="36" Margin="0,20,0,0" VerticalAlignment="Top" Width="265" FontSize="20" FontWeight="Bold" />
         <Label x:Name="label1" Content="Kosár tartalma:" HorizontalAlignment="Left" Height="27" Margin="22,57,0,0" VerticalAlignment="Top" Width="117"/>
-        <ListBox x:Name="basketList" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="250" Margin="22,89,0,0"/>
-        <CheckBox x:Name="deliveryChkBox" Content="Kiszállítás" HorizontalAlignment="Left" Height="21" Margin="97,220,0,0" VerticalAlignment="Top" Width="91"/>
+        <ListBox ItemsSource="{Binding ProductList}" x:Name="basketList" HorizontalAlignment="Left" Height="126" VerticalAlignment="Top" Width="250" Margin="22,89,0,0"/>
+        <CheckBox x:Name="deliveryChkBox" Content="Kiszállítás" HorizontalAlignment="Left" Height="21" Margin="97,220,0,0" VerticalAlignment="Top" Width="91" Checked="deliveryChkBox_Checked" Unchecked="deliveryChkBox_Unchecked"/>
         <Label x:Name="label2" Content="Kiszállítás díja:" HorizontalAlignment="Left" Height="26" Margin="22,251,0,0" VerticalAlignment="Top" Width="117"/>
         <Label x:Name="label2_Copy" Content="Végösszeg:" HorizontalAlignment="Left" Height="26" Margin="22,282,0,0" VerticalAlignment="Top" Width="117"/>
-        <Label x:Name="deliveryPriceTxt" Content="Label" HorizontalAlignment="Left" Height="26" Margin="144,251,0,0" VerticalAlignment="Top" Width="76"/>
-        <Label x:Name="totalSumTxt" Content="Label" HorizontalAlignment="Left" Height="26" Margin="144,282,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="deliveryPriceTxt" Content="{Binding}" HorizontalAlignment="Left" Height="26" Margin="144,251,0,0" VerticalAlignment="Top" Width="76"/>
+        <Label x:Name="totalSumTxt" Content="{Binding}" HorizontalAlignment="Left" Height="26" Margin="144,282,0,0" VerticalAlignment="Top" Width="76"/>
         <Button x:Name="placeOrderButton" Content="Elfogad" HorizontalAlignment="Left" Height="40" Margin="22,320,0,0" VerticalAlignment="Top" Width="120
-                "/>
+                " Click="placeOrderButton_Click"/>
         <Button x:Name="cancelButton" Content="Mégsem" HorizontalAlignment="Left" Height="40" Margin="152,320,0,0" VerticalAlignment="Top" Width="120                 "/>
 
     </Grid>

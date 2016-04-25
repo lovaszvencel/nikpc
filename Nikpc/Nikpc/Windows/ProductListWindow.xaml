@@ -18,8 +18,9 @@
         <Label Content="Ft" HorizontalAlignment="Left" Height="28" Margin="481,108,0,0" VerticalAlignment="Top" Width="20" RenderTransformOrigin="2.809,1.839"/>
         <TextBox x:Name="priceFromTxt" HorizontalAlignment="Left" Height="28" Margin="333,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59"/>
         <TextBox x:Name="priceToTxt" HorizontalAlignment="Left" Height="28" Margin="417,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59"/>
-        <Button Content="Mehet" x:Name="searchButton" HorizontalAlignment="Right" Height="28" Margin="0,108,10,0" VerticalAlignment="Top" Width="120" Click="SearchClick"/>
+        <Button Content="Mehet" x:Name="searchButton" HorizontalAlignment="Left" Height="28" Margin="520,107,0,0" VerticalAlignment="Top" Width="83" Click="SearchClick"/>
         <Button Content="Adataim" x:Name="dataButton" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="120" Height="28" Click="DataClick"/>
+        <Button Content="Tovább a megrendeléshez" x:Name="orderButton" HorizontalAlignment="Right" Margin="0,107,11.333,0" VerticalAlignment="Top" Width="174" Height="28" Click="orderButton_Click"/>
 
     </Grid>
 </Window>
