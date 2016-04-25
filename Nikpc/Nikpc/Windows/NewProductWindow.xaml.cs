@@ -18,24 +18,22 @@ namespace Nikpc.Windows
 {
     public partial class NewProductWindow : Window
     {
+        Product p;
         ProductAdministrationController pac;
-        public NewProductWindow()
+        public NewProductWindow(Product p)
         {
+            this.p = p;
             pac = new ProductAdministrationController();
             InitializeComponent();
         }
 
         private void modifyProductButton_Click(object sender, RoutedEventArgs e)
         {
-            pac.AddProduct(new Product
-            {
-                Name = productNameTxt.Text,
-                Price = int.Parse(productPriceTxt.Text),
-                Details = productDetailsTxt.Text,
-                Available = checkBoxAvailable.IsChecked.Value,
-                Stock = int.Parse(productPriceTxt.Text),
-            });
-            MessageBox.Show("Sikeres mentés!");
+            p.Name = productNameTxt.Text;
+            p.Price = int.Parse(productPriceTxt.Text);
+            p.Details = productDetailsTxt.Text;
+            p.Available = checkBoxAvailable.IsChecked.Value;
+            p.Stock = int.Parse(productPriceTxt.Text);
             this.Close();
         }
     }
