@@ -43,7 +43,6 @@ namespace Nikpc.Windows
                         uc.ModifyUser(Controllers.UserController.currentUser,
                         new User
                         {
-                            Type = "admin",
                             Name = nameTxt.Text,
                             Address = addressTxt.Text,
                             Email = emailTxt.Text,
@@ -51,6 +50,8 @@ namespace Nikpc.Windows
                             PhoneNumber = phoneTxt.Text,
                             Username = userNameTxt.Text
                         });
+                        (sender as ModifyingUserListWindow).usersList.ItemsSource = null;
+                        (sender as ModifyingUserListWindow).usersList.ItemsSource = Controllers.UserController.AllUsers;
                         MessageBox.Show("Sikeres változtatás!");
                         this.Close();
                     }

@@ -28,6 +28,7 @@ namespace Nikpc.Windows
         {
             InitializeComponent();
             Init();
+            pc = new ProductController();
             chosenProductList.DataContext = UserController.currentUser.Cart;
         }
 

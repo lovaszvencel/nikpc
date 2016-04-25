@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    class ProductController : Bindable, IProductListViewHandler, IProductViewHandler
+    class ProductController : IProductListViewHandler, IProductViewHandler
     {
         public static ObservableCollection<Product> AllProducts = new ObservableCollection<Product>();
         public static ObservableCollection<Product> FilteredProducts = new ObservableCollection<Product>();
-        public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();        
-
+        public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();
+        nikpcEntities1 db = new nikpcEntities1();
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo)
         {
             FilteredProducts.Clear();
@@ -25,6 +25,7 @@ namespace Nikpc.Controllers
             }
         }
         
+        // TODO sort
         public void ViewSortProducts(string sortByParameter, bool ascending)
         {
             throw new NotImplementedException();
@@ -65,16 +66,6 @@ namespace Nikpc.Controllers
         {
             db.Product.Find(productInCart.Product.Id).Stock -= productInCart.Quantity;
             db.SaveChanges();
-        }
-
-        public static void ListProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void ViewProduct()
-        {
-            throw new NotImplementedException();
         }
     }
 }

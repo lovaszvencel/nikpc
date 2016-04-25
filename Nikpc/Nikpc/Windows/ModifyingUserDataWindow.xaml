@@ -4,7 +4,7 @@
         Title="Adatok módosítása" Height="600" Width="600" Background="#FFB2D3CD">
     <Grid>
         <Label Content="{Binding Username}" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox x:Name="userNameTxt" HorizontalAlignment="Right" Height="30" Margin="0,120,70,0" TextWrapping="Wrap" Text="{Binding Username}" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="userNameTxt" HorizontalAlignment="Right" Height="30" Margin="0,120,70,0" TextWrapping="Wrap" Text="{Binding Username}" VerticalAlignment="Top" Width="300" IsEnabled="False"/>
         <PasswordBox x:Name="newPasswordTxt" HorizontalAlignment="Right" Height="30" Margin="0,170,70,0" VerticalAlignment="Top" Width="300"/>
         <PasswordBox x:Name="newPasswordAgainTxt" HorizontalAlignment="Right" Height="30" Margin="0,220,70,0" VerticalAlignment="Top" Width="300"/>
         <TextBox x:Name="nameTxt" HorizontalAlignment="Right" Height="30" Margin="0,270,70,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="300"/>

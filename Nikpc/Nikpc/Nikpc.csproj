@@ -88,7 +88,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\Bindable.cs" />
     <Compile Include="Classes\Cart.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
@@ -196,7 +195,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Interfaces\IDataHandler.cs" />
     <Compile Include="Interfaces\ILogInHandler.cs" />
     <Compile Include="Interfaces\IUserHandler.cs" />
     <Compile Include="Interfaces\IPaymentHandler.cs" />

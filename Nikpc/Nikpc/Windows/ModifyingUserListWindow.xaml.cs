@@ -51,8 +51,17 @@ namespace Nikpc.Windows
 
         private void ModifyUserClick(object sender, RoutedEventArgs e)
         {
-            ModifyingUserDataWindow mudw = new ModifyingUserDataWindow(usersList.SelectedItem as User);
-            mudw.Show();
+            if (usersList.SelectedItem != null)
+            {
+                ModifyingUserDataWindow mudw = new ModifyingUserDataWindow(usersList.SelectedItem as User);
+                if (mudw.ShowDialog() != true)
+                {
+                    usersList.ItemsSource = null;
+                    usersList.ItemsSource = UserController.AllUsers;
+                }
+            }
+            else
+                MessageBox.Show("Válassz ki egy felhasználót!", "Nincs felhasználó kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         private void BackClick(object sender, RoutedEventArgs e)

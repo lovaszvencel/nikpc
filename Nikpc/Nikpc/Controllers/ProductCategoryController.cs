@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class ProductCategoryController : Bindable, IProductCategoryHandler
+    public class ProductCategoryController : IProductCategoryHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
         public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();
