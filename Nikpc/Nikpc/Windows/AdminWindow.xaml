@@ -4,9 +4,9 @@
         Title="Admin felület" Height="300" Width="300"
         Background="#FFB2D3CD">
     <Grid>
-        <Button x:Name="modifyUsersButton" Content="Felhasználók kezelése" HorizontalAlignment="Center" Height="40" Margin="71,75,71,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="modifyProductsButton" Content="Termékek módosítása" HorizontalAlignment="Center" Height="40" Margin="71,120,71,0" VerticalAlignment="Top" Width="150"/>
-        <Button x:Name="productListButton" Content="Terméklista" HorizontalAlignment="Center" Height="40" Margin="71,165,71,0" VerticalAlignment="Top" Width="150"/>
+        <Button x:Name="modifyUsersButton" Content="Felhasználók kezelése" HorizontalAlignment="Center" Height="40" Margin="0,75,0,0" VerticalAlignment="Top" Width="150" Click="modifyUsersButton_Click"/>
+        <Button x:Name="modifyProductsButton" Content="Termékek módosítása" HorizontalAlignment="Center" Height="40" Margin="0,120,0,0" VerticalAlignment="Top" Width="150" Click="modifyProductsButton_Click"/>
+        <Button x:Name="productListButton" Content="Terméklista" HorizontalAlignment="Center" Height="40" Margin="0,165,0,0" VerticalAlignment="Top" Width="150" Click="productListButton_Click"/>
 
     </Grid>
 </Window>

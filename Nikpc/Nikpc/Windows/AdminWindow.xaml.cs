@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,24 @@ namespace Nikpc.Windows
         public AdminWindow()
         {
             InitializeComponent();
+        }
+
+        private void modifyUsersButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModifyingUserListWindow mulw = new ModifyingUserListWindow();
+            mulw.Show();
+        }
+
+        private void modifyProductsButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModifyingProductListWindow mplw = new ModifyingProductListWindow();
+            mplw.Show();
+        }
+
+        private void productListButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProductListWindow plw = new ProductListWindow();
+            plw.Show();
         }
     }
 }

@@ -32,6 +32,7 @@ namespace Nikpc.Windows
                 ProductController.productList.Add(i);
 
             uc = new UserController();
+            
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
@@ -41,29 +42,53 @@ namespace Nikpc.Windows
 
         private void enterButton_Click(object sender, RoutedEventArgs e)
         {
-            User user = uc.LogInAuthentication(userNameTxt.Text, passwordTxt.Password);
-            if (user != null)
+            UserController.currentUser=uc.LogInAuthentication(userNameTxt.Text, passwordTxt.Password);
+            if (userNameTxt.Text == "" || passwordTxt.Password == "")
             {
-                ProductListWindow plw = new ProductListWindow(user);
+                MessageBox.Show("Nem adta meg a belépési adatait!", "Hiányos adatok", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+            if (UserController.currentUser != null && UserController.currentUser.Type != "admin")
+            {
+                ProductListWindow plw = new ProductListWindow();
                 plw.Show();
+                this.Close();
+            }
+            else if (UserController.currentUser != null)
+            {
+                AdminWindow aw = new AdminWindow();
+                aw.Show();
+                var users = from i in db.User
+                            select i;
+                foreach (User u in users)
+                {
+                    if (!u.Id.Equals(UserController.currentUser.Id))
+                        UserController.AllUsers.Add(u);
+                }
                 this.Close();
             }
             else
             {
                 if (MessageBoxResult.Yes == MessageBox.Show("Sikertelen bejelentkezés!\nBelép vendégként?", "Sikertelen", MessageBoxButton.YesNo))
                 {
-                    ProductListWindow plw = new ProductListWindow(null);
+                    ProductListWindow plw = new ProductListWindow();
                     plw.Show();
                     this.Close();
                 }
             }
-
         }
 
         private void regButton_Click(object sender, RoutedEventArgs e)
         {
             RegistrationWindow rw = new RegistrationWindow();
             rw.Show();
+        }
+
+        private void enterAsQuestClick(object sender, RoutedEventArgs e)
+        {
+            ProductListWindow plw = new ProductListWindow();
+            plw.Show();
+            this.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +20,11 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class ProductListWindow : Window
     {
-        User user; // ha vendég, akkor ez null, különben objektum
-        public ProductListWindow(User user)
+        //User user; // ha vendég, akkor ez null, különben objektum
+        //UserControllerben egy static currentUser van helyette
+        public ProductListWindow()
         {
-            this.user = user;
+            //UserController.currentUser = user; --> megcsinálja a loginwindowban
             InitializeComponent();
         }
     }

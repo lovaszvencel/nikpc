@@ -19,9 +19,41 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class ModifyingUserDataWindow : Window
     {
-        public ModifyingUserDataWindow()
+        Controllers.UserController uc;
+        User user;
+        public ModifyingUserDataWindow(User user)
         {
             InitializeComponent();
+            this.DataContext = user;
+            this.user = user;
+            uc = new Controllers.UserController();
+        }
+
+        private void SaveClick(object sender, RoutedEventArgs e)
+        {
+            if (userNameTxt.Text != "" && newPasswordTxt.Password != "" && newPasswordAgainTxt.Password != "" && nameTxt.Text != "" && emailTxt.Text != "")
+            {
+                if (newPasswordTxt.Password == newPasswordAgainTxt.Password)
+                {
+                    uc.ModifyUser(user as User,
+                    new User
+                    {
+                        Type = "admin",
+                        Name = nameTxt.Text,
+                        Address = addressTxt.Text,
+                        Email = emailTxt.Text,
+                        Password = newPasswordTxt.Password,
+                        PhoneNumber = phoneTxt.Text,
+                        Username = userNameTxt.Text
+                    });
+                    MessageBox.Show("Sikeres változtatás!");
+                    this.Close();
+                }
+                else
+                    MessageBox.Show("A jelszavak nem egyeznek");
+            }
+            else
+                MessageBox.Show("A csillaggal jelölt mezők kitöltése kötelező!");
         }
     }
 }
