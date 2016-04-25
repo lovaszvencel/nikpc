@@ -23,5 +23,25 @@ namespace Nikpc.Windows
         {
             InitializeComponent();
         }
+
+        private void DeleteClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ModifyClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CancelClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -71,7 +71,7 @@ namespace Nikpc.Controllers
 
         public void ModifyUser(User oldUser, User newUser)
         {
-            AllUsers[AllUsers.IndexOf(oldUser)] = newUser;
+            currentUser = newUser;
             db.User.Remove(db.User.Find(oldUser.Id));
             db.User.Add(newUser);
             db.SaveChanges();

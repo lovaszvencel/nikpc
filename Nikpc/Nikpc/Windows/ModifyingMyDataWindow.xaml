@@ -4,23 +4,24 @@
         Title="Adataim módosítása" Height="650" Width="600" Background="#FFB2D3CD">
     <Grid>
         <Label Content="Adataim módosítása" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox x:Name="userNameTxt" HorizontalAlignment="Right" Height="30" Margin="0,120,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="oldPasswordTxt" HorizontalAlignment="Right" Height="30" Margin="0,170,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="newPasswordTxt" HorizontalAlignment="Right" Height="30" Margin="0,220,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="newPasswordAgainTxt" HorizontalAlignment="Right" Height="30" Margin="0,270,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="nameTxt" HorizontalAlignment="Right" Height="30" Margin="0,320,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="emailTxt" HorizontalAlignment="Right" Height="30" Margin="0,370,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="phoneTxt" HorizontalAlignment="Right" Height="30" Margin="0,420,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <TextBox x:Name="addressTxt" HorizontalAlignment="Right" Height="30" Margin="0,470,70,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="300"/>
-        <Label Content="Felhasználónév" HorizontalAlignment="Left" Margin="80,120,0,0" VerticalAlignment="Top" Height="30"/>
-        <Label Content="Régi jelszó (kötelező)" HorizontalAlignment="Left" Margin="80,170,0,0" VerticalAlignment="Top" Height="30"/>
-        <Label Content="Új jelszó" HorizontalAlignment="Left" Margin="80,220,0,0" VerticalAlignment="Top" Height="30"/>
-        <Label Content="Új jelszó megerősítése" HorizontalAlignment="Left" Margin="80,270,0,0" VerticalAlignment="Top" Height="30"/>
-        <Label Content="Teljes név" HorizontalAlignment="Left" Margin="80,320,0,0" VerticalAlignment="Top" Height="30"/>
-        <Label Content="E-mail cím" HorizontalAlignment="Left" Margin="80,370,0,0" VerticalAlignment="Top" Height="30"/>
+        <TextBox x:Name="userNameTxt" HorizontalAlignment="Right" Height="30" Margin="0,120,70,0" TextWrapping="Wrap" Text="{Binding Username}" VerticalAlignment="Top" Width="300"/>
+        <PasswordBox x:Name="oldPasswordTxt" HorizontalAlignment="Right" Height="30" Margin="0,170,70,0" VerticalAlignment="Top" Width="300"/>
+        <PasswordBox x:Name="newPasswordTxt" HorizontalAlignment="Right" Height="30" Margin="0,220,70,0" VerticalAlignment="Top" Width="300"/>
+        <PasswordBox x:Name="newPasswordAgainTxt" HorizontalAlignment="Right" Height="30" Margin="0,270,70,0" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="nameTxt" HorizontalAlignment="Right" Height="30" Margin="0,320,70,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="emailTxt" HorizontalAlignment="Right" Height="30" Margin="0,370,70,0" TextWrapping="Wrap" Text="{Binding Email}" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="phoneTxt" HorizontalAlignment="Right" Height="30" Margin="0,420,70,0" TextWrapping="Wrap" Text="{Binding PhoneNumber}" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="addressTxt" HorizontalAlignment="Right" Height="30" Margin="0,470,70,0" TextWrapping="Wrap" Text="{Binding Address}" VerticalAlignment="Top" Width="300"/>
+        <Label Content="Felhasználónév *" HorizontalAlignment="Left" Margin="80,120,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="Régi jelszó *" HorizontalAlignment="Left" Margin="80,170,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="Új jelszó *" HorizontalAlignment="Left" Margin="80,220,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="Új jelszó megerősítése *" HorizontalAlignment="Left" Margin="80,270,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="Teljes név *" HorizontalAlignment="Left" Margin="80,320,0,0" VerticalAlignment="Top" Height="30"/>
+        <Label Content="E-mail cím *" HorizontalAlignment="Left" Margin="80,370,0,0" VerticalAlignment="Top" Height="30"/>
         <Label Content="Telefonszám" HorizontalAlignment="Left" Margin="80,420,0,0" VerticalAlignment="Top" Height="30"/>
         <Label Content="Kiszállítási cím" HorizontalAlignment="Left" Margin="80,470,0,0" VerticalAlignment="Top" Height="30"/>
-        <Button x:Name="saveButton" Content="Változtatások mentése" HorizontalAlignment="Left" Margin="120,530,0,0" VerticalAlignment="Top" Width="150" Height="30"/>
-        <Button x:Name="cancelButton"  Content="Mégsem" HorizontalAlignment="Right" Margin="0,530,120,0" VerticalAlignment="Top" Width="150" IsCancel="True" Height="30"/>
+        <Button x:Name="saveButton" Content="Változtatások mentése" HorizontalAlignment="Left" Margin="120,530,0,0" VerticalAlignment="Top" Width="150" Height="30" Click="SaveClick"/>
+        <Button x:Name="cancelButton"  Content="Mégsem" HorizontalAlignment="Right" Margin="0,530,120,0" VerticalAlignment="Top" Width="150" IsCancel="True" Height="30" Click="CancelClick"/>
+        <Label Content="* A csillaggal jelölt mezők kitöltése kötelező!" HorizontalAlignment="Left" Margin="10,584,0,0" VerticalAlignment="Top" Width="300"/>
     </Grid>
 </Window>
