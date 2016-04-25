@@ -26,5 +26,11 @@ namespace Nikpc.Windows
             InitializeComponent();
             productList.DataContext = pac; 
         }
+
+        private void DataClick(object sender, RoutedEventArgs e)
+        {
+            ModifyingMyDataWindow mmdw = new ModifyingMyDataWindow();
+            mmdw.Show();
+        }
     }
 }

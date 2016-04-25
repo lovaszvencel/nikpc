@@ -26,6 +26,11 @@ namespace Nikpc.Windows
         public LogInWindow()
         {
             InitializeComponent();
+            var product = from i in db.Product
+                          select i;
+            foreach (var i in product)
+                ProductController.productList.Add(i);
+
             uc = new UserController();
             
         }

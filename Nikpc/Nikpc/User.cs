@@ -12,6 +12,20 @@ namespace Nikpc
     using System;
     using System.Collections.Generic;
     
+    public class ProductInCart
+    {
+        public Product Product { get; set; }
+        public int Quantity { get; set; }
+
+        public ProductInCart(Product product)
+        {
+            Product = product;
+            Quantity = 1;
+        }
+
+
+    }
+    
     public partial class User
     {
         public int Id { get; set; }
@@ -22,5 +36,11 @@ namespace Nikpc
         public string Address { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+
+        public override string ToString()
+        {
+            return Name + " (" + Username + ")";
+        }
+        public List<ProductInCart> Cart = new List<ProductInCart>();
     }
 }
