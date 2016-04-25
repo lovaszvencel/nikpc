@@ -17,10 +17,10 @@ namespace Nikpc.Controllers
 
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo)
         {
-            FilteredProducts = new ObservableCollection<Product>();
+            FilteredProducts.Clear();
             foreach (Product p in AllProducts)
             {
-                if ((p.Name.Contains(productName) || productName == "") && (productCategory == null || p.CategoryID == productCategory.Id) && (p.Price > priceFrom) && (p.Price < priceTo || priceTo == 0))
+                if ((p.Name.ToLower().Contains(productName.ToLower()) || productName == "") && (productCategory == null || p.CategoryID == productCategory.Id) && (p.Price > priceFrom) && (p.Price < priceTo || priceTo == 0))
                     FilteredProducts.Add(p);
             }
             //OnPropertyChanged(typeof(ProductController), "FilteredProducts");
