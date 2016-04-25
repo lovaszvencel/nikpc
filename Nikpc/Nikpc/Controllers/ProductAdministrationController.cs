@@ -1,4 +1,5 @@
-﻿using Nikpc.Interfaces;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class ProductAdministrationController: IProductHandler, IProductListHandler
+    public class ProductAdministrationController: Bindable, IProductHandler, IProductListHandler
     {
         nikpcEntities1 db;
         public ObservableCollection<Product> AllProducts { get; set; }
@@ -35,17 +36,23 @@ namespace Nikpc.Controllers
 
         public void ModifyProduct(Product oldProduct, Product newProductData)
         {
-            throw new NotImplementedException();
+            db.Product.Remove(db.Product.Find(oldProduct.Id));
+            db.Product.Add(newProductData);
+            db.SaveChanges();
         }
 
         public void DeleteProduct(Product product)
         {
-            throw new NotImplementedException();
+            AllProducts.Remove(product);
+            OnPropertyChanged("AllUsers");
+            db.Product.Remove(db.Product.Find(product.Id));
+            db.SaveChanges();
         }
 
         public bool ReserveProduct(Product product, int quantity)
         {
-            throw new NotImplementedException();
+            // TODO adatbázisban kell ehhez módosítani?
+            return true;
         }
 
         public void AdminSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
@@ -60,6 +67,8 @@ namespace Nikpc.Controllers
 
         public void AddProduct(Product product)
         {
+            AllProducts.Add(product);
+            OnPropertyChanged("AllProducts");
             db.Product.Add(product);
             db.SaveChanges();
         }
