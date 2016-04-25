@@ -14,7 +14,7 @@
                 <DataTemplate>
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="250"/>
                             <ColumnDefinition Width="100"/>
                             <ColumnDefinition Width="100"/>
                         </Grid.ColumnDefinitions>
@@ -42,16 +42,16 @@
         <Label Background="White" HorizontalAlignment="Left" Height="30" Margin="10,158,0,0" VerticalAlignment="Top" Width="771" VerticalContentAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="250"/>
                     <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="100"/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                 </Grid.RowDefinitions>
-                <Label Content="Név" Grid.Column="0"/>
-                <Label Content="Ár" Grid.Column="1"/>
-                <Label Content="Kategória" Grid.Column="2"/>
+                <Label x:Name="NameLbl" Content="Név" Grid.Column="0" MouseDown="Name_MouseDown"/>
+                <Label x:Name="PriceLbl" Content="Ár" Grid.Column="1" MouseDown="Price_MouseDown"/>
+                <Label x:Name="CategoryLbl"  Content="Kategória" Grid.Column="2" MouseDown="Category_MouseDown"/>
             </Grid>
         </Label>
     </Grid>

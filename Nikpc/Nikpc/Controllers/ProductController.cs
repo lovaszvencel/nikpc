@@ -77,7 +77,7 @@ namespace Nikpc.Controllers
 
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
         {
-            if (value==null || (int)value == 0)
+            if (value == null || (int)value == 0)
                 return "-";
             int id = (int)value;            
             return db.ProductCategory.Find(id).Name;
