@@ -19,12 +19,11 @@ namespace Nikpc.Windows
     public partial class ProductListWindow : Window
     {
         ProductController pc;
-        //UserControllerben egy static currentUser van helyette
         public ProductListWindow()
         {
-            //UserController.currentUser = user; --> megcsinálja a loginwindowban
             InitializeComponent();
             pc = new ProductController();
+            ProductController.Atmasol();
         }
 
         private void DataClick(object sender, RoutedEventArgs e)

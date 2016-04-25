@@ -21,10 +21,24 @@ namespace Nikpc.Controllers
 
         public void ModifyProduct(Product oldProduct, Product newProductData)
         {
-            ProductController.AllProducts.Remove(oldProduct);
-            
-            db.Product.Remove(db.Product.Find(oldProduct.Id));
-            db.Product.Add(newProductData);
+            if(newProductData.ImageURL!="")
+            {
+                db.Product.Find(oldProduct.Id).ImageURL = newProductData.ImageURL;
+                oldProduct.ImageURL = newProductData.ImageURL;
+            }
+            db.Product.Find(oldProduct.Id).Name = newProductData.Name;
+            db.Product.Find(oldProduct.Id).OnSale = newProductData.OnSale;
+            db.Product.Find(oldProduct.Id).Price = newProductData.Price;
+            db.Product.Find(oldProduct.Id).RatingAverage = newProductData.RatingAverage;
+            db.Product.Find(oldProduct.Id).Stock = newProductData.Stock;
+            db.Product.Find(oldProduct.Id).CategoryID = newProductData.CategoryID;
+            db.Product.Find(oldProduct.Id).Available = newProductData.Available;
+            db.Product.Find(oldProduct.Id).Details = newProductData.Details;
+            oldProduct.Name = newProductData.Name;
+            oldProduct.OnSale = newProductData.OnSale;
+            oldProduct.Price = newProductData.Price;
+            oldProduct.RatingAverage = newProductData.RatingAverage;
+            oldProduct.Stock = newProductData.Stock;
             db.SaveChanges();
         }
 
@@ -40,17 +54,6 @@ namespace Nikpc.Controllers
             // TODO adatbázisban kell ehhez módosítani?
             return true;
         }
-
-        public void AdminSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
-        {
-            //mod FilteredProducts
-        }
-
-        public void AdminSortProducts(string sortByParameter, bool ascending)
-        {
-            //mod FilteredProducts
-        }
-
         public void AddProduct(Product product)
         {
             ProductController.AllProducts.Add(product);

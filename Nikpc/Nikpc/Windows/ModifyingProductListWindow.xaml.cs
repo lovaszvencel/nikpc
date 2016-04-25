@@ -23,19 +23,15 @@ namespace Nikpc.Windows
         ProductAdministrationController pac;
         public ModifyingProductListWindow()
         {
-            pac = new ProductAdministrationController();
             InitializeComponent();
-            this.productList.DataContext = pac;
+            pac = new ProductAdministrationController();
         }
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            Product p = new Product();
-            NewProductWindow np = new NewProductWindow(p);
-            np.ShowDialog();
-
-            pac.AddProduct(p);
-            MessageBox.Show("Sikeres mentés!");
+            NewProductWindow np = new NewProductWindow();
+            if(np.ShowDialog()!=true)
+                MessageBox.Show("Sikeres mentés!");
         }
 
         private void modifyButton_Click(object sender, RoutedEventArgs e)
@@ -43,7 +39,11 @@ namespace Nikpc.Windows
             if (productList.SelectedItem != null)
             {
                 ModifyProductInfo mpw = new ModifyProductInfo(productList.SelectedItem as Product);
-                mpw.Show();
+                if (mpw.ShowDialog() != true)
+                {
+                    productList.ItemsSource = null;
+                    productList.ItemsSource = ProductController.AllProducts;
+                }
             }
             else
                 MessageBox.Show("Válassz egy terméket!");

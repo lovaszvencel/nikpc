@@ -67,6 +67,7 @@ namespace Nikpc.Controllers
                 db.Product.Find(item.Product.Id).Stock -= item.Quantity;
 
                 db.SaveChanges();
+                item.Product.Stock -= item.Quantity;
             }
         }
 

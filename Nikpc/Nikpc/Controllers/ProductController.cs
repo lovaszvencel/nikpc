@@ -6,10 +6,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 
 namespace Nikpc.Controllers
 {
-    class ProductController : IProductListViewHandler, IProductViewHandler
+    class ProductController : IProductListViewHandler, IProductViewHandler, IValueConverter
     {
         public static ObservableCollection<Product> AllProducts = new ObservableCollection<Product>();
         public static ObservableCollection<Product> FilteredProducts = new ObservableCollection<Product>();
@@ -25,6 +26,15 @@ namespace Nikpc.Controllers
             }
         }
         
+        public static void Atmasol()
+        {
+            FilteredProducts.Clear();
+            foreach (Product p in AllProducts)
+            {
+                FilteredProducts.Add(p);
+            }
+        }
+
         // TODO sort
         public void ViewSortProducts(string sortByParameter, bool ascending)
         {
@@ -63,6 +73,19 @@ namespace Nikpc.Controllers
         {
             db.Product.Find(productInCart.Product.Id).Stock -= productInCart.Quantity;
             db.SaveChanges();
+        }
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if ((int)value == 0)
+                return "-";
+            int id = (int)value;            
+            return db.ProductCategory.Find(id).Name;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }
