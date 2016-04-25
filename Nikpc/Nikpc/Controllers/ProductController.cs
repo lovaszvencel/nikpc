@@ -26,6 +26,15 @@ namespace Nikpc.Controllers
             }
         }
         
+        public static void Atmasol()
+        {
+            FilteredProducts.Clear();
+            foreach (Product p in AllProducts)
+            {
+                FilteredProducts.Add(p);
+            }
+        }
+
         // TODO sort
         public void ViewSortProducts(string sortByParameter, bool ascending)
         {
@@ -44,9 +53,6 @@ namespace Nikpc.Controllers
 
         public void AddProductToCart(Product product)
         {
-
-            // db.Product.Find(product.Id).Stock = product.Stock - 1;
-            //db.Product.Find(product.Id).Stock = db.Product.Find(product.Id).Stock - 1;
             UserController.currentUser.Cart.Add(new ProductInCart(product));
 
             /*int i = 0;
@@ -58,9 +64,9 @@ namespace Nikpc.Controllers
                 UserController.currentUser.Cart.Add(new ProductInCart(product));*/
         }
         
-        public static int GetStock()
+        public int GetStock(Product product)
         {
-            throw new NotImplementedException();
+            return product.Stock;
         }
 
         public void ReserveProduct(ProductInCart productInCart)

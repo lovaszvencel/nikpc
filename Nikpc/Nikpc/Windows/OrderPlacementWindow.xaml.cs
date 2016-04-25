@@ -21,11 +21,13 @@ namespace Nikpc.Windows
     public partial class OrderPlacementWindow : Window
     {
         CartController cc;
+        OrderController oc;
         int? fullPrice;
 
         public OrderPlacementWindow()
         {
             cc = new CartController();
+            oc = new OrderController();
             Init();
             InitializeComponent();
             deliveryPriceTxt.DataContext = 0;
@@ -58,6 +60,7 @@ namespace Nikpc.Windows
         private void placeOrderButton_Click(object sender, RoutedEventArgs e)
         {
             PaymentWindow pw = new PaymentWindow(totalSumTxt.DataContext);
+            oc.PlaceOrder(deliveryChkBox.IsChecked, int.Parse(totalSumTxt.DataContext.ToString()), Enums.PaymentMethod.Card);
             pw.Show();
             this.Close();
         }

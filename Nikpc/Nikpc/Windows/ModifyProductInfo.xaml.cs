@@ -21,11 +21,31 @@ namespace Nikpc.Windows
     public partial class ModifyProductInfo : Window
     {
         ProductAdministrationController pac;
+        Product p;
         public ModifyProductInfo(Product product)
         {
             pac = new ProductAdministrationController();
             InitializeComponent();
+            p = product;
             this.DataContext = product;
+        }
+
+        private void modifyProductButton_Click(object sender, RoutedEventArgs e)
+        {
+            pac.ModifyProduct(p, new Product()
+            {
+                Name = productNameTxt.Text,
+                OnSale = 0,
+                Price = int.Parse(productPriceTxt.Text),
+                Details = productDetailsTxt.Text,
+                Stock = int.Parse(productStockTxt.Text),
+                ImageURL = filePathTxt.Text,
+                RatingAverage = 0,
+                CategoryID = comboBox.SelectedItem != null ? (comboBox.SelectedItem as ProductCategory).Id : 0,
+                Available = checkBox.IsChecked.Value
+            });
+            MessageBox.Show("A módosítás sikeres!");
+            this.Close();
         }
     }
 }

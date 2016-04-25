@@ -12,8 +12,8 @@
         <Label x:Name="label1" Content="Ára:" HorizontalAlignment="Left" Height="26" Margin="180,51,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy" Content="Részletek:" HorizontalAlignment="Left" Height="26" Margin="180,82,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy1" Content="Darab:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
-        <Button x:Name="modifyProductButton" Content="Módosítás" HorizontalAlignment="Left" Height="40" Margin="263,284,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox Text="{Binding Name}" x:Name="productNameTxt" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213"/>
+        <Button x:Name="modifyProductButton" Content="Módosítás" HorizontalAlignment="Left" Height="40" Margin="263,284,0,0" VerticalAlignment="Top" Width="120" Click="modifyProductButton_Click"/>
+        <TextBox Text="{Binding Name}" x:Name="productNameTxt" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="364"/>
         <TextBox Text="{Binding Price}" x:Name="productPriceTxt" HorizontalAlignment="Left" Height="26" Margin="263,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
         <TextBox Text="{Binding Details}" x:Name="productDetailsTxt" HorizontalAlignment="Left" Height="88" Margin="263,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
         <TextBox Text="{Binding Stock}" x:Name="productStockTxt" HorizontalAlignment="Left" Height="26" Margin="263,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.444,5.54"/>

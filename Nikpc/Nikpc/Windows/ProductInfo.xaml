@@ -12,15 +12,20 @@
         <local2:ProductController x:Key="CategoryConverter"/>
     </Window.Resources>
     <Grid>
-        <Label x:Name="productNameLbl" Content="{Binding Name}" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" VerticalAlignment="Top" Width="209" FontSize="20" FontWeight="Bold"/>
+        <Label x:Name="productNameLbl" Content="{Binding Name}" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" VerticalAlignment="Top" Width="364" FontSize="20" FontWeight="Bold"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="18,51,0,0" VerticalAlignment="Top" Width="150"/>
         <Label x:Name="label1" Content="Ára:" HorizontalAlignment="Left" Height="26" Margin="180,51,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy" Content="Részletek:" HorizontalAlignment="Left" Height="26" Margin="180,82,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy1" Content="Elérhetőség:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
-        <Button x:Name="addToCartButton" Content="Kosárba" HorizontalAlignment="Left" Height="40" Margin="220,264,0,0" VerticalAlignment="Top" Width="120" Click="addToCartButton_Click"/>
+        <Button x:Name="addToCartButton" Content="Kosárba" HorizontalAlignment="Left" Height="40" Margin="227,227,0,0" VerticalAlignment="Top" Width="140" Click="addToCartButton_Click"/>
         <Label x:Name="productPriceLbl" Content="{Binding Price}" HorizontalAlignment="Left" Height="26" Margin="273,51,0,0" VerticalAlignment="Top" Width="109"/>
-        <Label x:Name="productDetailsLbl" Content="{Binding Details}" HorizontalAlignment="Left" Height="89" Margin="273,82,0,0" VerticalAlignment="Top" Width="109"/>
+        <Label x:Name="productDetailsLbl" HorizontalAlignment="Left" Height="89" Margin="273,82,0,0" VerticalAlignment="Top" Width="109">
+            <Label.Content>
+                <AccessText TextWrapping="Wrap" Text="{Binding Details}"/>
+            </Label.Content>
+        </Label>
         <Label x:Name="productAvailabilityLbl" Content="{Binding Available}" HorizontalAlignment="Left" Height="26" Margin="273,176,0,0" VerticalAlignment="Top" Width="109"/>
+        <Button x:Name="checkStockButton" Content="Elérhetőség ellenőrzése" HorizontalAlignment="Left" Height="40" Margin="227,280,0,0" VerticalAlignment="Top" Width="140" Click="checkStockButton_Click"/>
         <Label x:Name="label1_Copy2" Content="Kategória:" HorizontalAlignment="Left" Height="26" Margin="180,218,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
         <Label x:Name="productCatLbl" Content="{Binding CategoryID, Converter={StaticResource CategoryConverter}}" HorizontalAlignment="Left" Height="26" Margin="273,218,0,0" VerticalAlignment="Top" Width="109"/>
 
