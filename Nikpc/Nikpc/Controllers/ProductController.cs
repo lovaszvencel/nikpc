@@ -61,9 +61,10 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public static void ReserveProduct(Product product)
+        public void ReserveProduct(ProductInCart productInCart)
         {
-            throw new NotImplementedException();
+            db.Product.Find(productInCart.Product.Id).Stock -= productInCart.Quantity;
+            db.SaveChanges();
         }
 
         public static void ListProducts()
