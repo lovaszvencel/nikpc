@@ -54,5 +54,11 @@ namespace Nikpc.Windows
             ModifyingOrderListWindow molw = new ModifyingOrderListWindow();
             molw.Show();
         }
+
+        private void statButton_Click(object sender, RoutedEventArgs e)
+        {
+            StatsWindow sw = new StatsWindow();
+            sw.Show();
+        }
     }
 }

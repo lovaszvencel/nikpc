@@ -7,7 +7,10 @@
         <Label Content="Statisztikák és napló" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Label Content="Statisztikák" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Height="25"/>
         <Label Content="Napló" HorizontalAlignment="Left" Margin="10,380,0,0" VerticalAlignment="Top" Height="25"/>
-        <ListBox x:Name="statsList" HorizontalAlignment="Left" Height="250" Margin="10,110,0,0" VerticalAlignment="Top" Width="422.5"/>
         <ListBox x:Name="logList" HorizontalAlignment="Left" Height="250" Margin="10,420,0,0" VerticalAlignment="Top" Width="422.5"/>
+        <Label x:Name="label" Content="Összes vásárlás (db)" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Összes vásárlás értéke" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="sumPrice" Content="" HorizontalAlignment="Left" Margin="183,157,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.57,0.526" FontStyle="Italic"/>
+        <Label x:Name="sumShop" Content="" HorizontalAlignment="Left" Margin="183,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.57,0.526" FontStyle="Italic"/>
     </Grid>
 </Window>
