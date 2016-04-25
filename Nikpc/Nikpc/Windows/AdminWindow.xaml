@@ -4,11 +4,11 @@
         Title="Admin felület" Height="319.982" Width="300"
         Background="#FFB2D3CD">
     <Grid>
-        <Button x:Name="modifyUsersButton" Content="Felhasználók kezelése" HorizontalAlignment="Center" Height="40" Margin="53,35,52.333,0" VerticalAlignment="Top" Width="188" Click="modifyUsersButton_Click"/>
-        <Button x:Name="modifyProductsButton" Content="Termékek módosítása" HorizontalAlignment="Center" Height="40" Margin="53,80,52.333,0" VerticalAlignment="Top" Width="188" Click="modifyProductsButton_Click"/>
-        <Button x:Name="productListButton" Content="Terméklista" HorizontalAlignment="Center" Height="40" Margin="53,125,52.333,0" VerticalAlignment="Top" Width="188" Click="productListButton_Click"/>
-        <Button x:Name="productCategoriesButton" Content="Termékkategóriák kezelése" HorizontalAlignment="Center" Height="40" Margin="53,170,52.333,0" VerticalAlignment="Top" Width="188" Click="productCategoriesButton_Click"/>
-        <Button x:Name="ordersButton" Content="Megrendelések megtekintése" HorizontalAlignment="Center" Height="40" Margin="54,215,52.333,0" VerticalAlignment="Top" Width="187" Click="ordersButton_Click"/>
+        <Button x:Name="modifyUsersButton" Content="Felhasználók kezelése" HorizontalAlignment="Center" Height="40" Margin="0,35,0,0" VerticalAlignment="Top" Width="188" Click="modifyUsersButton_Click"/>
+        <Button x:Name="modifyProductsButton" Content="Termékek módosítása" HorizontalAlignment="Center" Height="40" Margin="0,80,0,0" VerticalAlignment="Top" Width="188" Click="modifyProductsButton_Click"/>
+        <Button x:Name="productListButton" Content="Terméklista" HorizontalAlignment="Center" Height="40" Margin="0,125,0,0" VerticalAlignment="Top" Width="188" Click="productListButton_Click"/>
+        <Button x:Name="productCategoriesButton" Content="Termékkategóriák kezelése" HorizontalAlignment="Center" Height="40" Margin="0,170,0,0" VerticalAlignment="Top" Width="188" Click="productCategoriesButton_Click"/>
+        <Button x:Name="ordersButton" Content="Megrendelések megtekintése" HorizontalAlignment="Center" Height="40" Margin="0,215,0,0" VerticalAlignment="Top" Width="187" Click="ordersButton_Click"/>
 
     </Grid>
 </Window>

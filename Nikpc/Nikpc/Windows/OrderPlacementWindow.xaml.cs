@@ -47,8 +47,8 @@ namespace Nikpc.Windows
 
         private void deliveryChkBox_Checked(object sender, RoutedEventArgs e)
         {
-            deliveryPriceTxt.DataContext = fullPrice * 0.05;
-            totalSumTxt.DataContext = fullPrice * 1.05;
+            deliveryPriceTxt.DataContext = 1000;
+            totalSumTxt.DataContext = fullPrice +1000;
         }
 
         private void deliveryChkBox_Unchecked(object sender, RoutedEventArgs e)
