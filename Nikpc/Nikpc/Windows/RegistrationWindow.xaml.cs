@@ -31,17 +31,19 @@ namespace Nikpc.Windows
         {
             /**
             * TODO esetleg plusz ellenőrzés, hogy helyesek-e a bevitt adatok
+            * TODO ne legyen usernév ütközés
             */
             if (userNameTxt.Text != "" && passwordTxt.Password != "" && passwordAgainTxt.Password != "" && nameTxt.Text != "" && emailTxt.Text != "")
             {
                 if (passwordTxt.Password == passwordAgainTxt.Password)
                 {
-                    /** TODO típus-t nehéz kezelni, hogyan lehet admin/vásárló/dolgozó típust választani?
-                    * most default admin
-                    */
+                    string type = "vasarlo";
+                    if (alkalmazottadiobtn.IsChecked.Value) type = "alkalmazott";
+                    if (adminradiobtn.IsChecked.Value) type = "admin";
+
                     uc.AddUser(new User
                     {
-                        Type = "admin",
+                        Type = type,
                         Name = nameTxt.Text,
                         Address = addressTxt.Text,
                         Email = emailTxt.Text,
@@ -57,6 +59,12 @@ namespace Nikpc.Windows
             }
             else
                 MessageBox.Show("A csillaggal jelölt mezők kitöltése kötelező!");
+        }
+
+        private void cancelButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (MessageBoxResult.Yes == MessageBox.Show("Biztosan kilép mentés nélkül?", "Megerősítés", MessageBoxButton.YesNo))
+                this.Close();
         }
     }
 }

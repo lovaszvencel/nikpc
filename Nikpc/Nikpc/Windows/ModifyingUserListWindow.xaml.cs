@@ -33,6 +33,8 @@ namespace Nikpc.Windows
             rw.Title = "Felhasználó hozzáadása";
             rw.udvLbl.Content = "Új felhasználó";
             rw.RegisterButton.Content = "Hozzáad";
+            rw.typeLabel.Visibility = Visibility.Visible;
+            rw.typeButtons.Visibility = Visibility.Visible;
             rw.Show();
         }
 
@@ -41,7 +43,7 @@ namespace Nikpc.Windows
             if (usersList.SelectedItem != null)
             {
                 uc.DeleteUser(usersList.SelectedItem as User);
-                MessageBox.Show((usersList.SelectedItem as User).Username + " sikeresen törölve", "Felhasználó törölve", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("A felhasználót sikeresen töröltük!", "Felhasználó törlése", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
                 MessageBox.Show("Válassz ki egy felhasználót!", "Nincs felhasználó kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);
