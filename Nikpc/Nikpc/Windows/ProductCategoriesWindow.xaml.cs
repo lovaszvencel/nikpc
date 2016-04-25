@@ -52,7 +52,21 @@ namespace Nikpc.Windows
 
         private void modifyCategoryButton_Click(object sender, RoutedEventArgs e)
         {
-            pcc.ModifyCategory(categoryNameTxt.Text, categoriesList.SelectedItem as ProductCategory);
+            if (categoriesList.SelectedItem != null)
+            {
+                pcc.ModifyCategory(categoryNameTxt.Text, categoriesList.SelectedItem as ProductCategory);                
+                categoriesList.ItemsSource = null;
+                categoriesList.ItemsSource = Controllers.ProductCategoryController.AllCategories;
+                MessageBox.Show("A kategóriát sikeresen módosítottuk!", "Kategória módosítása", MessageBoxButton.OK, MessageBoxImage.Information);
+                categoryNameTxt.Text = "";
+            }
+            else
+                MessageBox.Show("Válassz ki egy kategóriát!", "Nincs kategória kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);            
+        }
+
+        private void backButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

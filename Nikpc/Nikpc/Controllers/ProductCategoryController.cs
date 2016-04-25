@@ -22,7 +22,11 @@ namespace Nikpc.Controllers
 
         public void ModifyCategory(string name, ProductCategory category)
         {
-            category.Name = name;
+            foreach (ProductCategory p in AllCategories)
+            {
+                if (p.Equals(category))
+                    p.Name = name;
+            }  
             db.ProductCategory.Find(category.Id).Name = name;
             db.SaveChanges();
         }
