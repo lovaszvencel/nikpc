@@ -4,9 +4,10 @@
         Title="Admin felület" Height="300" Width="300"
         Background="#FFB2D3CD">
     <Grid>
-        <Button x:Name="modifyUsersButton" Content="Felhasználók kezelése" HorizontalAlignment="Center" Height="40" Margin="0,75,0,0" VerticalAlignment="Top" Width="150" Click="modifyUsersButton_Click"/>
-        <Button x:Name="modifyProductsButton" Content="Termékek módosítása" HorizontalAlignment="Center" Height="40" Margin="0,120,0,0" VerticalAlignment="Top" Width="150" Click="modifyProductsButton_Click"/>
-        <Button x:Name="productListButton" Content="Terméklista" HorizontalAlignment="Center" Height="40" Margin="0,165,0,0" VerticalAlignment="Top" Width="150" Click="productListButton_Click"/>
+        <Button x:Name="modifyUsersButton" Content="Felhasználók kezelése" HorizontalAlignment="Center" Height="40" Margin="0,51,0,0" VerticalAlignment="Top" Width="150" Click="modifyUsersButton_Click"/>
+        <Button x:Name="modifyProductsButton" Content="Termékek módosítása" HorizontalAlignment="Center" Height="40" Margin="0,96,0,0" VerticalAlignment="Top" Width="150" Click="modifyProductsButton_Click"/>
+        <Button x:Name="productListButton" Content="Terméklista" HorizontalAlignment="Center" Height="40" Margin="0,141,0,0" VerticalAlignment="Top" Width="150" Click="productListButton_Click"/>
+        <Button x:Name="productCategoriesButton" Content="Termékkategóriák kezelése" HorizontalAlignment="Center" Height="40" Margin="0,186,0,0" VerticalAlignment="Top" Width="150" Click="productCategoriesButton_Click"/>
 
     </Grid>
 </Window>

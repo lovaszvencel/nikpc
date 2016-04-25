@@ -48,7 +48,7 @@ namespace Nikpc.Controllers
             throw new NotImplementedException();
         }
 
-        public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
+        public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo)
         {
             throw new NotImplementedException();
         }

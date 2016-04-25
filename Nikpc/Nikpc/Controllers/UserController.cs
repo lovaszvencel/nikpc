@@ -56,7 +56,7 @@ namespace Nikpc.Controllers
         public void AddUser(User user)
         {
             AllUsers.Add(user);
-            OnPropertyChanged("AllUsers");
+            OnPropertyChanged(typeof(UserController), "AllUsers");
             db.User.Add(user);
             db.SaveChanges();
         }
@@ -64,7 +64,7 @@ namespace Nikpc.Controllers
         public void DeleteUser(User user)
         {
             AllUsers.Remove(user);
-            OnPropertyChanged("AllUsers");
+            OnPropertyChanged(typeof(UserController), "AllUsers");
             db.User.Remove(db.User.Find(user.Id));
             db.SaveChanges();
         }

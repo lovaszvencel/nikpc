@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Nikpc.Windows"
+        xmlns:local="clr-namespace:Nikpc.Controllers"
         mc:Ignorable="d"
         Title="Termék hozzáadása" Height="400" Width="400"
         Background="#FFB2D3CD">
@@ -12,7 +12,7 @@
         <Label x:Name="label1" Content="Ára:" HorizontalAlignment="Left" Height="26" Margin="180,51,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy" Content="Részletek:" HorizontalAlignment="Left" Height="26" Margin="180,82,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy1" Content="Elérhetőség:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
-        <Button x:Name="modifyProductButton" Content="Hozzáadás" HorizontalAlignment="Left" Height="40" Margin="262,242,0,0" VerticalAlignment="Top" Width="120" Click="modifyProductButton_Click"/>
+        <Button x:Name="modifyProductButton" Content="Hozzáadás" HorizontalAlignment="Left" Height="40" Margin="263,283,0,0" VerticalAlignment="Top" Width="120" Click="modifyProductButton_Click"/>
         <TextBox x:Name="productNameTxt" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213"/>
         <TextBox x:Name="productPriceTxt" HorizontalAlignment="Left" Height="26" Margin="263,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
         <TextBox x:Name="productDetailsTxt" HorizontalAlignment="Left" Height="88" Margin="263,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
@@ -22,5 +22,7 @@
         <TextBox x:Name="filePathTxt" HorizontalAlignment="Left" Height="22" Margin="18,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
         <Label x:Name="label1_Copy2" Content="Darab:" HorizontalAlignment="Left" Height="26" Margin="179,211,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
         <CheckBox x:Name="checkBoxAvailable" Content="elérhető" HorizontalAlignment="Left" Margin="263,181,0,0" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding Source={x:Static local:ProductCategoryController.AllCategories}}" x:Name="comboBox" HorizontalAlignment="Left" Margin="262,247,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label1_Copy3" Content="Kategória:" HorizontalAlignment="Left" Height="26" Margin="180,247,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
     </Grid>
 </Window>
