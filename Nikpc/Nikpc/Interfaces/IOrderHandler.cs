@@ -12,7 +12,7 @@ namespace Nikpc.Interfaces
     {
         void ModifyOrderPaymentMethod(PaymentMethod newPaymentMethod);
         void EmptyOrderCart();
-        void PlaceOrder(Cart cart, PaymentMethod paymentMethod);
+        void PlaceOrder(bool? delivery, int total, PaymentMethod paymentMethod);
         void DeleteOrder(Order order);
         void ModifyOrderProductQuantity(Product product, int newQuantity);
     }
