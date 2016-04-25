@@ -31,8 +31,21 @@ namespace Nikpc.Windows
         {
             if (categoryNameTxt.Text != "")
             {
-                pcc.AddCategory(categoryNameTxt.Text);
-                MessageBox.Show("A kategóriát sikeresen felvettük!", "Új kategória felvétele", MessageBoxButton.OK, MessageBoxImage.Information);
+                bool contains = false;
+                for (int i = 0; i < Controllers.ProductCategoryController.AllCategories.Count && !contains; i++)
+                {
+                    contains = (Controllers.ProductCategoryController.AllCategories[i].Name == categoryNameTxt.Text);
+                }
+                if (contains)
+                {
+                    MessageBox.Show("Már van ilyen kategória!", "Létező kategória", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+                else
+                {
+                    pcc.AddCategory(categoryNameTxt.Text);
+                    MessageBox.Show("A kategóriát sikeresen felvettük!", "Új kategória felvétele", MessageBoxButton.OK, MessageBoxImage.Information);
+                    categoryNameTxt.Text = "";
+                }
             }
             else
                 MessageBox.Show("Írj be egy kategória nevet!", "Nincs név megadva", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -54,14 +67,14 @@ namespace Nikpc.Windows
         {
             if (categoriesList.SelectedItem != null)
             {
-                pcc.ModifyCategory(categoryNameTxt.Text, categoriesList.SelectedItem as ProductCategory);                
+                pcc.ModifyCategory(categoryNameTxt.Text, categoriesList.SelectedItem as ProductCategory);
                 categoriesList.ItemsSource = null;
                 categoriesList.ItemsSource = Controllers.ProductCategoryController.AllCategories;
                 MessageBox.Show("A kategóriát sikeresen módosítottuk!", "Kategória módosítása", MessageBoxButton.OK, MessageBoxImage.Information);
                 categoryNameTxt.Text = "";
             }
             else
-                MessageBox.Show("Válassz ki egy kategóriát!", "Nincs kategória kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);            
+                MessageBox.Show("Válassz ki egy kategóriát!", "Nincs kategória kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
         private void backButton_Click(object sender, RoutedEventArgs e)
