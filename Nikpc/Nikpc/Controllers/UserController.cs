@@ -10,6 +10,7 @@ namespace Nikpc.Controllers
     public class UserController : IDataHandler, ILogInHandler, INewUserHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
+        public static User currentUser;
 
         public void ModifyMyAddress(string newAddress)
         {

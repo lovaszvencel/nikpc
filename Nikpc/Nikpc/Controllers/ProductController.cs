@@ -9,21 +9,14 @@ namespace Nikpc.Controllers
 {
     class ProductController : IProductListViewHandler, IProductViewHandler
     {
+        public static List<Product> productList = new List<Product>();
+        public static List<ProductCategory> categoryList = new List<ProductCategory>();
+
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
             throw new NotImplementedException();
         }
-
-        public void ListAddProductToCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ListDeleteProductFromCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public void ViewSortProducts(string sortByParameter, bool ascending)
         {
             throw new NotImplementedException();
@@ -41,14 +34,15 @@ namespace Nikpc.Controllers
 
         public void AddProductToCart(Product product)
         {
-            throw new NotImplementedException();
+            int i = 0;
+            while (i < UserController.currentUser.Cart.Count && !UserController.currentUser.Cart[i].Product.Equals(product))
+                i++;
+            if (i < UserController.currentUser.Cart.Count)
+                UserController.currentUser.Cart[i].Quantity++;
+            else
+                UserController.currentUser.Cart.Add(new ProductInCart(product));
         }
-
-        public void DeleteProductFromCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
+        
         public static int GetStock()
         {
             throw new NotImplementedException();
@@ -68,11 +62,5 @@ namespace Nikpc.Controllers
         {
             throw new NotImplementedException();
         }
-
-
-
-
-
-
     }
 }

@@ -22,9 +22,15 @@ namespace Nikpc.Windows
     public partial class LogInWindow : Window
     {
         UserController uc;
+        nikpcEntities1 db = new nikpcEntities1();
         public LogInWindow()
         {
             InitializeComponent();
+            var product = from i in db.Product
+                          select i;
+            foreach (var i in product)
+                ProductController.productList.Add(i);
+
             uc = new UserController();
         }
 
