@@ -44,7 +44,7 @@ namespace Nikpc.Controllers
         public void DeleteProduct(Product product)
         {
             AllProducts.Remove(product);
-            OnPropertyChanged("AllUsers");
+            OnPropertyChanged("AllProducts");
             db.Product.Remove(db.Product.Find(product.Id));
             db.SaveChanges();
         }

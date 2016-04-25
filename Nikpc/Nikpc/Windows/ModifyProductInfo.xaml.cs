@@ -25,6 +25,7 @@ namespace Nikpc.Windows
         {
             pac = new ProductAdministrationController();
             InitializeComponent();
+            this.DataContext = product;
         }
     }
 }

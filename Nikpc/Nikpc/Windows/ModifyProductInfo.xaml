@@ -11,14 +11,16 @@
         <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="18,51,0,0" VerticalAlignment="Top" Width="150"/>
         <Label x:Name="label1" Content="Ára:" HorizontalAlignment="Left" Height="26" Margin="180,51,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy" Content="Részletek:" HorizontalAlignment="Left" Height="26" Margin="180,82,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
-        <Label x:Name="label1_Copy1" Content="Elérhetőség:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
+        <Label x:Name="label1_Copy1" Content="Darab:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
         <Button x:Name="modifyProductButton" Content="Módosítás" HorizontalAlignment="Left" Height="40" Margin="262,242,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="productNameTxt" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213"/>
-        <TextBox x:Name="productPriceTxt" HorizontalAlignment="Left" Height="26" Margin="263,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
-        <TextBox x:Name="productDetailsTxt" HorizontalAlignment="Left" Height="88" Margin="263,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
-        <TextBox x:Name="productAvailabilityTxt" HorizontalAlignment="Left" Height="26" Margin="263,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.444,5.54"/>
+        <TextBox Text="{Binding Name}" x:Name="productNameTxt" HorizontalAlignment="Left" Height="36" Margin="18,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="213"/>
+        <TextBox Text="{Binding Price}" x:Name="productPriceTxt" HorizontalAlignment="Left" Height="26" Margin="263,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+        <TextBox Text="{Binding Details}" x:Name="productDetailsTxt" HorizontalAlignment="Left" Height="88" Margin="263,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119"/>
+        <TextBox Text="{Binding Stock}" x:Name="productStockTxt" HorizontalAlignment="Left" Height="26" Margin="263,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.444,5.54"/>
         <Label x:Name="label" Content="Új kép:" HorizontalAlignment="Left" Height="28" Margin="18,227,0,0" VerticalAlignment="Top" Width="50"/>
         <Button x:Name="browseButton" Content="Tallózás" HorizontalAlignment="Left" Height="28" Margin="91,227,0,0" VerticalAlignment="Top" Width="77"/>
         <TextBox x:Name="filePathTxt" HorizontalAlignment="Left" Height="22" Margin="18,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <CheckBox IsChecked="{Binding Available}" x:Name="checkBox" Content="elérhető" HorizontalAlignment="Left" Margin="263,211,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.485,0.316"/>
+        <Label x:Name="label1_Copy2" Content="Elérhetőség:" HorizontalAlignment="Left" Height="26" Margin="180,206,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
     </Grid>
 </Window>

@@ -30,8 +30,12 @@ namespace Nikpc.Windows
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            NewProductWindow np = new NewProductWindow();
-            np.Show();
+            Product p = new Product();
+            NewProductWindow np = new NewProductWindow(p);
+            np.ShowDialog();
+
+            pac.AddProduct(p);
+            MessageBox.Show("Sikeres mentés!");
         }
 
         private void modifyButton_Click(object sender, RoutedEventArgs e)
