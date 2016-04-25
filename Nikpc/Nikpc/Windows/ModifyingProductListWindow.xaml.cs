@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,18 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class ModifyingProductListWindow : Window
     {
+        ProductAdministrationController pac;
         public ModifyingProductListWindow()
         {
+            pac = new ProductAdministrationController();
             InitializeComponent();
+            this.productList.DataContext = pac;
+        }
+
+        private void addButton_Click(object sender, RoutedEventArgs e)
+        {
+            NewProduct np = new NewProduct();
+            np.Show();
         }
     }
 }

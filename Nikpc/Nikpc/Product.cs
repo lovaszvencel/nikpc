@@ -22,5 +22,12 @@ namespace Nikpc
         public Nullable<bool> Available { get; set; }
         public Nullable<double> RatingAverage { get; set; }
         public Nullable<int> OnSale { get; set; }
+        public string Details { get; set; }
+        public int Stock { get; set; }
+
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

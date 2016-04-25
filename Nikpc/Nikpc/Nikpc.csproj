@@ -164,6 +164,9 @@
     <Compile Include="Windows\ModifyProductInfo.xaml.cs">
       <DependentUpon>ModifyProductInfo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\NewProduct.xaml.cs">
+      <DependentUpon>NewProduct.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\OrderPlacementWindow.xaml.cs">
       <DependentUpon>OrderPlacementWindow.xaml</DependentUpon>
     </Compile>
@@ -244,6 +247,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\ModifyingUserListWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\NewProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

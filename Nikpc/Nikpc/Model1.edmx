@@ -4,30 +4,22 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="nikpcModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityContainer Name="nikpcModelStoreContainer">
-          <EntitySet Name="Invoice" EntityType="nikpcModel.Store.Invoice" store:Type="Tables" Schema="nikpc" />
-          <EntitySet Name="Order" EntityType="nikpcModel.Store.Order" store:Type="Tables" Schema="nikpc" />
-          <EntitySet Name="OrderedProduct" EntityType="nikpcModel.Store.OrderedProduct" store:Type="Tables" Schema="nikpc" />
-          <EntitySet Name="Product" EntityType="nikpcModel.Store.Product" store:Type="Tables" Schema="nikpc" />
-          <EntitySet Name="ProductCategory" EntityType="nikpcModel.Store.ProductCategory" store:Type="Tables" Schema="nikpc" />
-          <EntitySet Name="User" EntityType="nikpcModel.Store.User" store:Type="Tables" Schema="nikpc" />
-        </EntityContainer>
+    <Schema Namespace="nikpcModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Invoice">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderId" Type="int" />
-          <Property Name="Date" Type="datetime" />
+          <Property Name="Date" Type="datetime" Precision="0" />
           <Property Name="Total" Type="int" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Date" Type="datetime" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Date" Type="datetime" Precision="0" />
           <Property Name="UserID" Type="int" />
           <Property Name="Total" Type="int" />
           <Property Name="Delivery" Type="bool" />
@@ -38,7 +30,7 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderID" Type="int" />
           <Property Name="ProductID" Type="int" />
           <Property Name="Quantity" Type="int" />
@@ -47,12 +39,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="varchar" MaxLength="45" />
           <Property Name="CategoryID" Type="int" />
           <Property Name="Price" Type="int" />
+          <Property Name="Details" Type="varchar" MaxLength="500" Nullable="false" />
           <Property Name="ImageURL" Type="varchar" MaxLength="45" />
           <Property Name="Available" Type="bool" />
+          <Property Name="Stock" Type="int" Nullable="false" />
           <Property Name="RatingAverage" Type="double" />
           <Property Name="OnSale" Type="int" />
         </EntityType>
@@ -60,14 +54,14 @@
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="45" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Type" Type="varchar" MaxLength="45" />
           <Property Name="Username" Type="varchar" MaxLength="45" />
           <Property Name="Password" Type="varchar" MaxLength="45" />
@@ -76,8 +70,15 @@
           <Property Name="Email" Type="varchar" MaxLength="45" />
           <Property Name="PhoneNumber" Type="varchar" MaxLength="45" />
         </EntityType>
-      </Schema>
-    </edmx:StorageModels>
+        <EntityContainer Name="nikpcModelStoreContainer">
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="nikpc" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="nikpc" store:Type="Tables" />
+          <EntitySet Name="OrderedProduct" EntityType="Self.OrderedProduct" Schema="nikpc" store:Type="Tables" />
+          <EntitySet Name="Product" EntityType="Self.Product" Schema="nikpc" store:Type="Tables" />
+          <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="nikpc" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="nikpc" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="nikpcModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -131,6 +132,8 @@
           <Property Name="Available" Type="Boolean" />
           <Property Name="RatingAverage" Type="Double" />
           <Property Name="OnSale" Type="Int32" />
+          <Property Name="Details" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Stock" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="ProductCategory">
           <Key>
@@ -194,6 +197,8 @@
           <EntitySetMapping Name="Product">
             <EntityTypeMapping TypeName="nikpcModel.Product">
               <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Stock" ColumnName="Stock" />
+                <ScalarProperty Name="Details" ColumnName="Details" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
@@ -244,6 +249,7 @@
         <DesignerProperty Name="EnablePluralization" Value="False" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="True" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

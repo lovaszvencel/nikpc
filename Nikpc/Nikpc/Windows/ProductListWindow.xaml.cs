@@ -15,17 +15,16 @@ using System.Windows.Shapes;
 
 namespace Nikpc.Windows
 {
-    /// <summary>
-    /// Interaction logic for ProductListWindow.xaml
-    /// </summary>
     public partial class ProductListWindow : Window
     {
-        //User user; // ha vendég, akkor ez null, különben objektum
+        ProductAdministrationController pac;
         //UserControllerben egy static currentUser van helyette
         public ProductListWindow()
         {
             //UserController.currentUser = user; --> megcsinálja a loginwindowban
+            pac = new ProductAdministrationController();
             InitializeComponent();
+            productList.DataContext = pac; 
         }
     }
 }

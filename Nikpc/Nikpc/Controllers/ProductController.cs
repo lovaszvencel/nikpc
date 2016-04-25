@@ -48,31 +48,5 @@ namespace Nikpc.Controllers
         {
             throw new NotImplementedException();
         }
-
-        public static int GetStock()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void ReserveProduct(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void ListProducts()
-        {
-            throw new NotImplementedException();
-        }
-
-        public static void ViewProduct()
-        {
-            throw new NotImplementedException();
-        }
-
-
-
-
-
-
     }
 }
