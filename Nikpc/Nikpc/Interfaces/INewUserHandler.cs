@@ -8,7 +8,7 @@ namespace Nikpc.Interfaces
 {
     interface INewUserHandler
     {
-        void UserDataCheck(string username, string password, string email);
+        string UserDataCheck(string username, string email);
         void AddUser(User user);
     }
 }

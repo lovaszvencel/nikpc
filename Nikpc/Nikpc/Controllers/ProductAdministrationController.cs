@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class ProductAdministrationController: Bindable, IProductHandler, IProductListHandler
+    public class ProductAdministrationController: IProductHandler, IProductListHandler
     {
         nikpcEntities1 db;
 
@@ -21,6 +21,8 @@ namespace Nikpc.Controllers
 
         public void ModifyProduct(Product oldProduct, Product newProductData)
         {
+            ProductController.AllProducts.Remove(oldProduct);
+            
             db.Product.Remove(db.Product.Find(oldProduct.Id));
             db.Product.Add(newProductData);
             db.SaveChanges();
@@ -29,7 +31,6 @@ namespace Nikpc.Controllers
         public void DeleteProduct(Product product)
         {
             ProductController.AllProducts.Remove(product);
-            OnPropertyChanged(typeof(ProductController), "AllProducts");
             db.Product.Remove(db.Product.Find(product.Id));
             db.SaveChanges();
         }
@@ -53,7 +54,6 @@ namespace Nikpc.Controllers
         public void AddProduct(Product product)
         {
             ProductController.AllProducts.Add(product);
-            OnPropertyChanged(typeof(ProductController), "AllProducts");
             db.Product.Add(product);
             db.SaveChanges();
         }

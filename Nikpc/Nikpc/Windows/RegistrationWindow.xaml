@@ -25,7 +25,7 @@
         <DockPanel x:Name="typeButtons" HorizontalAlignment="Left" Height="30" LastChildFill="False" Margin="223,463,0,0" VerticalAlignment="Top" Width="299" Visibility="Hidden">
             <RadioButton x:Name="adminradiobtn" Content="Admin" HorizontalAlignment="Left"  VerticalAlignment="Top" GroupName="tipusok"/>
             <RadioButton x:Name="alkalmazottadiobtn" Content="Alkalmazott" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="tipusok" Margin="5,0,0,0"/>
-            <RadioButton x:Name="vasarloradiobtn" Content="Dolgozo" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="tipusok" Margin="5,0,0,0"/>
+            <RadioButton x:Name="vasarloradiobtn" Content="Vasarlo" HorizontalAlignment="Left" VerticalAlignment="Top" GroupName="tipusok" Margin="5,0,0,0"/>
         </DockPanel>
     </Grid>
 </Window>

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class CartController : Bindable, IProductViewHandler, IProductListViewHandler
+    public class CartController : IProductViewHandler, IProductListViewHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
         public ObservableCollection<Product> ProductList { get; set; }
@@ -22,9 +22,12 @@ namespace Nikpc.Controllers
 
         private void Feltolt()
         {
-            foreach (var item in UserController.currentUser.Cart)
+            if (UserController.currentUser.Cart != null)
             {
-                ProductList.Add(item.Product);
+                foreach (var item in UserController.currentUser.Cart)
+                {
+                    ProductList.Add(item.Product);
+                }
             }
         }
 

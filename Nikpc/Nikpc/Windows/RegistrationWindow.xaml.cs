@@ -37,22 +37,29 @@ namespace Nikpc.Windows
             {
                 if (passwordTxt.Password == passwordAgainTxt.Password)
                 {
-                    string type = "vasarlo";
-                    if (alkalmazottadiobtn.IsChecked.Value) type = "alkalmazott";
-                    if (adminradiobtn.IsChecked.Value) type = "admin";
-
-                    uc.AddUser(new User
+                    string uzenet=uc.UserDataCheck(userNameTxt.Text, emailTxt.Text);
+                    if (uzenet == "")
                     {
-                        Type = type,
-                        Name = nameTxt.Text,
-                        Address = addressTxt.Text,
-                        Email = emailTxt.Text,
-                        Password = passwordTxt.Password,
-                        PhoneNumber = phoneTxt.Text,
-                        Username = userNameTxt.Text
-                    });
-                    MessageBox.Show("Sikeres regisztráció!");
-                    this.Close();
+                        string type = "vasarlo";
+                        if (alkalmazottadiobtn.IsChecked.Value) type = "alkalmazott";
+                        if (adminradiobtn.IsChecked.Value) type = "admin";
+
+                        uc.AddUser(new User
+                        {
+                            Type = type,
+                            Name = nameTxt.Text,
+                            Address = addressTxt.Text,
+                            Email = emailTxt.Text,
+                            Password = passwordTxt.Password,
+                            PhoneNumber = phoneTxt.Text,
+                            Username = userNameTxt.Text
+                        });
+                        MessageBox.Show("Sikeres regisztráció!");
+                        this.Close();
+
+                    }
+                    else
+                        MessageBox.Show(uzenet, "Hiba!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else
                     MessageBox.Show("A jelszavak nem egyeznek");
