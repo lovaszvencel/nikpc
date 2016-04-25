@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nikpc.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,39 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class ProductCategoriesWindow : Window
     {
+        ProductCategoryController pcc;
         public ProductCategoriesWindow()
         {
             InitializeComponent();
+            pcc = new ProductCategoryController();
+        }
+
+        private void newCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (categoryNameTxt.Text != "")
+            {
+                pcc.AddCategory(categoryNameTxt.Text);
+                MessageBox.Show("A kategóriát sikeresen felvettük!", "Új kategória felvétele", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+                MessageBox.Show("Írj be egy kategória nevet!", "Nincs név megadva", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
+
+        private void deleteCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (categoriesList.SelectedItem != null)
+            {
+                pcc.DeleteCategory(categoriesList.SelectedItem as ProductCategory);
+                MessageBox.Show("A kategóriát sikeresen töröltük!", "Kategória törlése", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+                MessageBox.Show("Válassz ki egy kategóriát!", "Nincs kategória kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);
+
+        }
+
+        private void modifyCategoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            pcc.ModifyCategory(categoryNameTxt.Text, categoriesList.SelectedItem as ProductCategory);
         }
     }
 }

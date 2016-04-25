@@ -31,6 +31,11 @@ namespace Nikpc.Windows
             foreach (var i in product)
                 ProductController.productList.Add(i);
 
+            var category = from i in db.ProductCategory
+                           select i;
+            foreach (var i in category)
+                ProductCategoryController.AllCategories.Add(i);
+
             uc = new UserController();
             
         }

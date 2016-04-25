@@ -8,10 +8,10 @@ namespace Nikpc.Interfaces
 {
     interface IProductCategoryHandler
     {
-        void AddCategory(string name, List<Product> products);
-        void ModifyCategory(string name);
+        void AddCategory(string name);
+        void ModifyCategory(string name, ProductCategory category);
         void DeleteCategory(ProductCategory category);
-        void AddProductsToCategory(List<Product> products);
+        void AddProductsToCategory(List<Product> products, ProductCategory category);
         void DeleteProductsFromCategory(List<Product> products);
     }
 }

@@ -11,7 +11,7 @@ namespace Nikpc.Controllers
     class ProductController : IProductListViewHandler, IProductViewHandler
     {
         public static ObservableCollection<Product> productList = new ObservableCollection<Product>();
-        public static ObservableCollection<ProductCategory> categoryList = new ObservableCollection<ProductCategory>();
+        
 
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
