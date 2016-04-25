@@ -26,7 +26,6 @@ namespace Nikpc.Windows
         public LogInWindow()
         {
             InitializeComponent();
-            Feltolt();
             uc = new UserController();
             
         }
@@ -40,6 +39,10 @@ namespace Nikpc.Windows
                 ProductController.AllProducts.Add(item);
                 ProductController.FilteredProducts.Add(item);
             }
+            var category = from i in db.ProductCategory
+                           select i;
+            foreach (var i in category)
+                ProductCategoryController.AllCategories.Add(i);
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
