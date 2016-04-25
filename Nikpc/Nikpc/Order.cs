@@ -21,5 +21,10 @@ namespace Nikpc
         public Nullable<bool> Delivery { get; set; }
         public string DeliveryAddress { get; set; }
         public string PaymentMethod { get; set; }
+
+        public override string ToString()
+        {
+            return "id: " + Id + "  dátum: " + Date.ToString() + "  felhasználó: " + UserID + "  összeg: " + Total + " Ft  cím:" + DeliveryAddress;
+        }
     }
 }

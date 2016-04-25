@@ -6,12 +6,27 @@ using System.Text;
 using System.Threading.Tasks;
 using Nikpc.Enums;
 using Nikpc.Classes;
+using System.Collections.ObjectModel;
 
 namespace Nikpc.Controllers
 {
     public class OrderController : IOrderHandler, IOrderListHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
+        public static ObservableCollection<Order> AllOrders = new ObservableCollection<Order>();
+
+        public OrderController()
+        {
+            /*var orderList = (from a in db.Order
+                            join b in db.User on a.UserID equals b.Id
+                            select new { a.Id, a.Date, b.Name, b.PhoneNumber, a.DeliveryAddress, a.Total, a.PaymentMethod, a.Delivery}).ToList();*/
+            var orderList = db.Order.ToList();
+
+            foreach (var item in orderList)
+            {
+                AllOrders.Add(item);
+            }
+        }
 
         public void ModifyOrderPaymentMethod(PaymentMethod newPaymentMethod)
         {
@@ -57,7 +72,9 @@ namespace Nikpc.Controllers
 
         public void DeleteOrder(Order order)
         {
-            throw new NotImplementedException();
+            var asd = order.Id;
+            db.Order.Remove(db.Order.Find(order.Id));
+            db.SaveChanges();
         }
 
         public void ModifyOrderProductQuantity(Product product, int newQuantity)

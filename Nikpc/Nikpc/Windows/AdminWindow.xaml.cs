@@ -48,5 +48,11 @@ namespace Nikpc.Windows
             ProductCategoriesWindow pcw = new ProductCategoriesWindow();
             pcw.Show();
         }
+
+        private void ordersButton_Click(object sender, RoutedEventArgs e)
+        {
+            ModifyingOrderListWindow molw = new ModifyingOrderListWindow();
+            molw.Show();
+        }
     }
 }
