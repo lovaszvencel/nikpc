@@ -4,9 +4,27 @@
         xmlns:local="clr-namespace:Nikpc.Controllers"
         Title="Termékek" Height="500" Width="800"
         Background="#FFB2D3CD">
+    <Window.Resources>
+        <local:ProductController x:Key="CategoryConverter"/>
+    </Window.Resources>
     <Grid>
         <Label Content="Termékek" HorizontalAlignment="Center" Height="40" Margin="0,20,0,0" VerticalAlignment="Top" Width="105" FontSize="20" FontWeight="Bold"/>
-        <ListBox ItemsSource="{Binding Source={x:Static local:ProductController.FilteredProducts}}" x:Name="productList" MouseDoubleClick="productList_MouseDoubleClick" HorizontalAlignment="Left" Height="319" Margin="10,141,0,0" VerticalAlignment="Top" Width="772"/>
+        <ListBox ItemsSource="{Binding Source={x:Static local:ProductController.FilteredProducts}}" x:Name="productList" MouseDoubleClick="productList_MouseDoubleClick" HorizontalAlignment="Left" Height="258" Margin="10,202,0,0" VerticalAlignment="Top" Width="772">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                            <ColumnDefinition Width="100"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{Binding Name}" Grid.Column="0"/>
+                        <Label Content="{Binding Price}" Grid.Column="1"/>
+                        <Label Content="{Binding CategoryID, Converter={StaticResource CategoryConverter}}" Grid.Column="2"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Label Content="Keresés:" HorizontalAlignment="Left" Height="28" Margin="10,64,0,0" VerticalAlignment="Top" Width="56"/>
         <TextBox x:Name="searchTxt" HorizontalAlignment="Left" Height="28" Margin="66,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <Label Content="Szűrés:" HorizontalAlignment="Left" Height="28" Margin="10,108,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="2.809,1.839"/>
@@ -21,6 +39,20 @@
         <Button Content="Mehet" x:Name="searchButton" HorizontalAlignment="Left" Height="28" Margin="520,107,0,0" VerticalAlignment="Top" Width="83" Click="SearchClick"/>
         <Button Content="Adataim" x:Name="dataButton" HorizontalAlignment="Right" Margin="0,10,10,0" VerticalAlignment="Top" Width="120" Height="28" Click="DataClick"/>
         <Button Content="Tovább a megrendeléshez" x:Name="orderButton" HorizontalAlignment="Right" Margin="0,107,11.333,0" VerticalAlignment="Top" Width="174" Height="28" Click="orderButton_Click"/>
-
+        <Label Background="White" HorizontalAlignment="Left" Height="30" Margin="10,158,0,0" VerticalAlignment="Top" Width="771" VerticalContentAlignment="Center">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Label Content="Név" Grid.Column="0"/>
+                <Label Content="Ár" Grid.Column="1"/>
+                <Label Content="Kategória" Grid.Column="2"/>
+            </Grid>
+        </Label>
     </Grid>
 </Window>

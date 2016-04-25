@@ -6,10 +6,11 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Data;
 
 namespace Nikpc.Controllers
 {
-    class ProductController : IProductListViewHandler, IProductViewHandler
+    class ProductController : IProductListViewHandler, IProductViewHandler, IValueConverter
     {
         public static ObservableCollection<Product> AllProducts = new ObservableCollection<Product>();
         public static ObservableCollection<Product> FilteredProducts = new ObservableCollection<Product>();
@@ -66,6 +67,19 @@ namespace Nikpc.Controllers
         {
             db.Product.Find(productInCart.Product.Id).Stock -= productInCart.Quantity;
             db.SaveChanges();
+        }
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            if (value == null)
+                return "-";
+            int id = (int)value;            
+            return db.ProductCategory.Find(id).Name;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

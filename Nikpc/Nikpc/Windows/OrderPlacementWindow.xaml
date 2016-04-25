@@ -18,7 +18,7 @@
         <Label x:Name="totalSumTxt" Content="{Binding}" HorizontalAlignment="Left" Height="26" Margin="144,282,0,0" VerticalAlignment="Top" Width="76"/>
         <Button x:Name="placeOrderButton" Content="Elfogad" HorizontalAlignment="Left" Height="40" Margin="22,320,0,0" VerticalAlignment="Top" Width="120
                 " Click="placeOrderButton_Click"/>
-        <Button x:Name="cancelButton" Content="Mégsem" HorizontalAlignment="Left" Height="40" Margin="152,320,0,0" VerticalAlignment="Top" Width="120                 "/>
+        <Button x:Name="cancelButton" Content="Mégsem" HorizontalAlignment="Left" Height="40" Margin="152,320,0,0" VerticalAlignment="Top" Width="120                 " Click="cancelButton_Click"/>
 
     </Grid>
 </Window>

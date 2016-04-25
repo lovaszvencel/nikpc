@@ -33,7 +33,7 @@ namespace Nikpc.Windows
             p.Price = int.Parse(productPriceTxt.Text);
             p.Details = productDetailsTxt.Text;
             p.Available = checkBoxAvailable.IsChecked.Value;
-            p.Stock = int.Parse(productPriceTxt.Text);
+            p.Stock = int.Parse(productPriceTxt.Text);            
             this.Close();
         }
     }
