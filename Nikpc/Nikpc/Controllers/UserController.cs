@@ -2,6 +2,7 @@
 using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,7 @@ namespace Nikpc.Controllers
     {
         nikpcEntities1 db = new nikpcEntities1();
         public static User currentUser;
-        public static List<User> AllUsers = new List<User>();
-        public static User currentUser;
+        public static ObservableCollection<User> AllUsers = new ObservableCollection<User>();
 
         public void ModifyMyAddress(string newAddress)
         {
