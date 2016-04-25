@@ -22,9 +22,12 @@ namespace Nikpc.Controllers
 
         private void Feltolt()
         {
-            foreach (var item in UserController.currentUser.Cart)
+            if (UserController.currentUser.Cart != null)
             {
-                ProductList.Add(item.Product);
+                foreach (var item in UserController.currentUser.Cart)
+                {
+                    ProductList.Add(item.Product);
+                }
             }
         }
 
