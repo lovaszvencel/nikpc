@@ -11,10 +11,10 @@ namespace Nikpc.Classes
     public class Bindable : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string n="")
+        public void OnPropertyChanged(object o, [CallerMemberName]string n="")
         {
             if(PropertyChanged!=null)
-                PropertyChanged(typeof(Controllers.UserController),new PropertyChangedEventArgs(n));
+                PropertyChanged(o,new PropertyChangedEventArgs(n));
         }
     }
 }

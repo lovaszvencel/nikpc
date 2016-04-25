@@ -8,7 +8,7 @@ namespace Nikpc.Interfaces
 {
     interface IProductListViewHandler
     {
-        void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available);       
+        void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo);       
         void ViewSortProducts(string sortByParameter, bool ascending);
     }
 }
