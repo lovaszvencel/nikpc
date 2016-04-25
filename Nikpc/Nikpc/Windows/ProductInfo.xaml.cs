@@ -19,9 +19,34 @@ namespace Nikpc.Windows
     /// </summary>
     public partial class ProductInfo : Window
     {
-        public ProductInfo()
+        Controllers.ProductController pc;
+        Product product;
+
+        public ProductInfo(Product product)
         {
             InitializeComponent();
+            this.DataContext = product;
+            this.product = product;
+            pc = new Controllers.ProductController();
+        }
+
+        private void addToCartButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.product.Available == false)
+            {
+                MessageBox.Show("Ez a termék sajnos nem elérhető!");
+            }
+            else if (this.product.Stock <= 0)
+            {
+                MessageBox.Show("Ez a termék sajnos elfogyott!");
+            }
+            else
+            {
+                //todo add to cart
+                this.product.Stock--;
+                MessageBox.Show("Kosárhoz adva!");
+                Close();
+            }
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Diagnostics;
 
 namespace Nikpc.Windows
 {
@@ -31,6 +32,12 @@ namespace Nikpc.Windows
         {
             ModifyingMyDataWindow mmdw = new ModifyingMyDataWindow();
             mmdw.Show();
+        }
+
+        private void productList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            ProductInfo piw = new ProductInfo((Product)productList.SelectedItem);
+            piw.Show();
         }
     }
 }
