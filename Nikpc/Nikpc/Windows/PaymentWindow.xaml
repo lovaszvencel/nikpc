@@ -8,7 +8,7 @@
         <Label Content="Teljes ár: " HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top"/>
         <Label x:Name="osszegLbl" Content="Binding teljes összeg" HorizontalAlignment="Left" Margin="80,100,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Kiválasztott termékek" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top"/>
-        <ListBox x:Name="chosenProductList" HorizontalAlignment="Center" Height="150" Margin="0,170,0,0" VerticalAlignment="Top" Width="472"/>
-        <Button x:Name="payButton" Content="Fizetés" HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" Width="150" Height="40"/>
+        <ListBox ItemsSource="{Binding Product.Name}" x:Name="chosenProductList" HorizontalAlignment="Center" Height="150" Margin="0,170,0,0" VerticalAlignment="Top" Width="472"/>
+        <Button x:Name="payButton" Content="Fizetés" HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" Width="150" Height="40" Click="payButton_Click"/>
     </Grid>
 </Window>
