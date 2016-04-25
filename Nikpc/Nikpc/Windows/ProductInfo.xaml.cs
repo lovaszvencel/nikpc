@@ -47,5 +47,10 @@ namespace Nikpc.Windows
                 Close();
             }
         }
+
+        private void checkStockButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Ebből a termékből még " + pc.GetStock(product) + " db elérhető.");
+        }
     }
 }
