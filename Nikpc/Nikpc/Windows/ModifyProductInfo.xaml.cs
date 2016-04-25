@@ -21,7 +21,7 @@ namespace Nikpc.Windows
     public partial class ModifyProductInfo : Window
     {
         ProductAdministrationController pac;
-        public ModifyProductInfo()
+        public ModifyProductInfo(Product product)
         {
             pac = new ProductAdministrationController();
             InitializeComponent();

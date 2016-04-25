@@ -34,22 +34,29 @@ namespace Nikpc.Windows
             np.Show();
         }
 
-        private void DeleteClick(object sender, RoutedEventArgs e)
+        private void modifyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (productList.SelectedItem != null)
+            {
+                ModifyProductInfo mpw = new ModifyProductInfo(productList.SelectedItem as Product);
+                mpw.Show();
+            }
+            else
+                MessageBox.Show("Válassz egy terméket!");
         }
 
-        private void ModifyClick(object sender, RoutedEventArgs e)
+        private void deleteButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (productList.SelectedItem != null)
+            {
+                pac.DeleteProduct(productList.SelectedItem as Product);
+                MessageBox.Show("A terméket sikeresen töröltük!", "Temék törlése", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+                MessageBox.Show("Válassz ki egy terméket!", "Nincs termék kiválasztva", MessageBoxButton.OK, MessageBoxImage.Warning);
         }
 
-        private void AddClick(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void CancelClick(object sender, RoutedEventArgs e)
+        private void backButton_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
