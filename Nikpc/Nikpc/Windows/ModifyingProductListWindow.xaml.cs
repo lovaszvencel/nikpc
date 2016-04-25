@@ -30,7 +30,7 @@ namespace Nikpc.Windows
 
         private void addButton_Click(object sender, RoutedEventArgs e)
         {
-            NewProduct np = new NewProduct();
+            NewProductWindow np = new NewProductWindow();
             np.Show();
         }
 

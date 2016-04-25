@@ -16,10 +16,10 @@ using System.Windows.Shapes;
 
 namespace Nikpc.Windows
 {
-    public partial class NewProduct : Window
+    public partial class NewProductWindow : Window
     {
         ProductAdministrationController pac;
-        public NewProduct()
+        public NewProductWindow()
         {
             pac = new ProductAdministrationController();
             InitializeComponent();
