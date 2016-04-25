@@ -1,15 +1,33 @@
-﻿using Nikpc.Interfaces;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class CartController : IProductViewHandler, IProductListViewHandler
+    public class CartController : Bindable, IProductViewHandler, IProductListViewHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
+        public ObservableCollection<Product> ProductList { get; set; }
+
+        public CartController()
+        {
+            ProductList = new ObservableCollection<Product>();
+            Feltolt();
+        }
+
+        private void Feltolt()
+        {
+            foreach (var item in UserController.currentUser.Cart)
+            {
+                ProductList.Add(item.Product);
+            }
+        }
+
         public void AddProductRating(int value, string review)
         {
             throw new NotImplementedException();
