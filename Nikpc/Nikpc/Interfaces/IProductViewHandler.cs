@@ -10,6 +10,6 @@ namespace Nikpc.Interfaces
     {
         void AddProductRating(int value, string review);
         void OpenProductImage(Product product);
-        void AddProductToCart(Product product);        
+        void AddProductToCart(Product product); 
     }
 }

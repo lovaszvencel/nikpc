@@ -42,5 +42,11 @@ namespace Nikpc.Windows
             ProductListWindow plw = new ProductListWindow();
             plw.Show();
         }
+
+        private void productCategoriesButton_Click(object sender, RoutedEventArgs e)
+        {
+            ProductCategoriesWindow pcw = new ProductCategoriesWindow();
+            pcw.Show();
+        }
     }
 }

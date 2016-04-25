@@ -12,26 +12,11 @@ namespace Nikpc.Controllers
     public class ProductAdministrationController: Bindable, IProductHandler, IProductListHandler
     {
         nikpcEntities1 db;
-        public ObservableCollection<Product> AllProducts { get; set; }
-        public ObservableCollection<Product> FilteredProducts { get; set; }
 
         public ProductAdministrationController()
         {
             db = new nikpcEntities1();
-            AllProducts = new ObservableCollection<Product>();
-            FilteredProducts = new ObservableCollection<Product>();
-            Feltolt();
-        }
-
-        private void Feltolt()
-        {
-            var products = from akt in db.Product
-                           select akt;
-            foreach (var item in products)
-            {
-                AllProducts.Add(item);
-                FilteredProducts.Add(item);
-            }
+            
         }
 
         public void ModifyProduct(Product oldProduct, Product newProductData)
@@ -43,8 +28,8 @@ namespace Nikpc.Controllers
 
         public void DeleteProduct(Product product)
         {
-            AllProducts.Remove(product);
-            OnPropertyChanged("AllProducts");
+            ProductController.AllProducts.Remove(product);
+            OnPropertyChanged(typeof(ProductController), "AllProducts");
             db.Product.Remove(db.Product.Find(product.Id));
             db.SaveChanges();
         }
@@ -67,8 +52,8 @@ namespace Nikpc.Controllers
 
         public void AddProduct(Product product)
         {
-            AllProducts.Add(product);
-            OnPropertyChanged("AllProducts");
+            ProductController.AllProducts.Add(product);
+            OnPropertyChanged(typeof(ProductController), "AllProducts");
             db.Product.Add(product);
             db.SaveChanges();
         }
