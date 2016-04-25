@@ -55,5 +55,10 @@ namespace Nikpc.Windows
             else
                 MessageBox.Show("A csillaggal jelölt mezők kitöltése kötelező!");
         }
+
+        private void CancelClick(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

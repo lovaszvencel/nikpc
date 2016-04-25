@@ -27,5 +27,11 @@ namespace Nikpc.Windows
             //UserController.currentUser = user; --> megcsinálja a loginwindowban
             InitializeComponent();
         }
+
+        private void DataClick(object sender, RoutedEventArgs e)
+        {
+            ModifyingMyDataWindow mmdw = new ModifyingMyDataWindow();
+            mmdw.Show();
+        }
     }
 }
