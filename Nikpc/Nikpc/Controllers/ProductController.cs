@@ -39,7 +39,7 @@ namespace Nikpc.Controllers
         {
 
             // db.Product.Find(product.Id).Stock = product.Stock - 1;
-            db.Product.Find(product.Id).Stock = db.Product.Find(product.Id).Stock - 1;
+            //db.Product.Find(product.Id).Stock = db.Product.Find(product.Id).Stock - 1;
             UserController.currentUser.Cart.Add(new ProductInCart(product));
 
             /*int i = 0;
