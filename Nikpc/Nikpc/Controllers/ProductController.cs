@@ -1,6 +1,7 @@
 ﻿using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,8 @@ namespace Nikpc.Controllers
 {
     class ProductController : IProductListViewHandler, IProductViewHandler
     {
-        public static List<Product> productList = new List<Product>();
-        public static List<ProductCategory> categoryList = new List<ProductCategory>();
+        public static ObservableCollection<Product> productList = new ObservableCollection<Product>();
+        public static ObservableCollection<ProductCategory> categoryList = new ObservableCollection<ProductCategory>();
 
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo, bool available)
         {
