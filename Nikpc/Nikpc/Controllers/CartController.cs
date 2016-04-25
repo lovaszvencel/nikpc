@@ -9,7 +9,7 @@ namespace Nikpc.Controllers
 {
     public class CartController : IProductViewHandler, IProductListViewHandler
     {
-
+        nikpcEntities1 db = new nikpcEntities1();
         public void AddProductRating(int value, string review)
         {
             throw new NotImplementedException();
