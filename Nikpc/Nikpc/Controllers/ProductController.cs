@@ -13,7 +13,8 @@ namespace Nikpc.Controllers
     {
         public static ObservableCollection<Product> AllProducts = new ObservableCollection<Product>();
         public static ObservableCollection<Product> FilteredProducts = new ObservableCollection<Product>();
-        public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();        
+        public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();
+        nikpcEntities1 db = new nikpcEntities1();
 
         public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo)
         {
