@@ -11,7 +11,7 @@
         <TextBox x:Name="searchTxt" HorizontalAlignment="Left" Height="28" Margin="66,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <Label Content="Szűrés:" HorizontalAlignment="Left" Height="28" Margin="10,108,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="2.809,1.839"/>
         <Label Content="Kategória:" HorizontalAlignment="Left" Height="28" Margin="66,108,0,0" VerticalAlignment="Top" Width="72" RenderTransformOrigin="2.809,1.839"/>
-        <ComboBox x:Name="categoryCB" HorizontalAlignment="Left" Height="28" Margin="138,108,0,0" VerticalAlignment="Top" Width="140"/>
+        <ComboBox x:Name="categoryCB" ItemsSource="{Binding Source={x:Static local:ProductCategoryController.AllCategories}}" HorizontalAlignment="Left" Height="28" Margin="138,108,0,0" VerticalAlignment="Top" Width="140"/>
         <Label Content="Label" HorizontalAlignment="Left" Height="6" Margin="359,118,0,0" VerticalAlignment="Top" Width="5"/>
         <Label Content="Ár:" HorizontalAlignment="Left" Height="28" Margin="298,108,0,0" VerticalAlignment="Top" Width="56" RenderTransformOrigin="2.809,1.839"/>
         <Label Content="-" HorizontalAlignment="Left" Height="28" Margin="397,108,0,0" VerticalAlignment="Top" Width="15" RenderTransformOrigin="2.809,1.839"/>

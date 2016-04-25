@@ -25,7 +25,6 @@ namespace Nikpc.Controllers
             category.Name = name;
             db.ProductCategory.Find(category.Id).Name = name;
             db.SaveChanges();
-            OnPropertyChanged();
         }
 
         public void DeleteCategory(ProductCategory category)
@@ -33,7 +32,6 @@ namespace Nikpc.Controllers
             AllCategories.Remove(category);
             db.ProductCategory.Remove(db.ProductCategory.Find(category.Id));
             db.SaveChanges();
-            OnPropertyChanged();
         }
 
         public void AddProductsToCategory(List<Product> products, ProductCategory category)

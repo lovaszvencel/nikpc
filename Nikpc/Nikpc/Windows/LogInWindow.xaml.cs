@@ -26,8 +26,8 @@ namespace Nikpc.Windows
         public LogInWindow()
         {
             InitializeComponent();
+            Feltolt();
             uc = new UserController();
-            
         }
 
         private void Feltolt()
