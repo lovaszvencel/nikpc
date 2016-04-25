@@ -37,6 +37,11 @@ namespace Nikpc.Windows
             }
 
             sumPrice.Content = sum;
+
+            var log = from akt in db.Log
+                      select akt;
+
+            logList.ItemsSource = log.ToList();
         }
     }
 }

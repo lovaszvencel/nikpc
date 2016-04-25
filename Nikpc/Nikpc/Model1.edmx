@@ -14,6 +14,14 @@
           <Property Name="Date" Type="datetime" Precision="0" />
           <Property Name="Total" Type="int" />
         </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Type" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="Details" Type="varchar" MaxLength="500" Nullable="false" />
+        </EntityType>
         <EntityType Name="Order">
           <Key>
             <PropertyRef Name="Id" />
@@ -72,6 +80,7 @@
         </EntityType>
         <EntityContainer Name="nikpcModelStoreContainer">
           <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="nikpc" store:Type="Tables" />
+          <EntitySet Name="Log" EntityType="Self.Log" Schema="nikpc" store:Type="Tables" />
           <EntitySet Name="Order" EntityType="Self.Order" Schema="nikpc" store:Type="Tables" />
           <EntitySet Name="OrderedProduct" EntityType="Self.OrderedProduct" Schema="nikpc" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="nikpc" store:Type="Tables" />
@@ -89,6 +98,7 @@
           <EntitySet Name="Product" EntityType="nikpcModel.Product" />
           <EntitySet Name="ProductCategory" EntityType="nikpcModel.ProductCategory" />
           <EntitySet Name="User" EntityType="nikpcModel.User" />
+          <EntitySet Name="Log" EntityType="nikpcModel.Log" />
         </EntityContainer>
         <EntityType Name="Invoice">
           <Key>
@@ -154,6 +164,14 @@
           <Property Name="Address" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="Email" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Log">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Details" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -229,6 +247,15 @@
                 <ScalarProperty Name="Address" ColumnName="Address" />
                 <ScalarProperty Name="Email" ColumnName="Email" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Log">
+            <EntityTypeMapping TypeName="nikpcModel.Log">
+              <MappingFragment StoreEntitySet="Log">
+                <ScalarProperty Name="Details" ColumnName="Details" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

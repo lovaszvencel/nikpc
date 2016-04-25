@@ -12,9 +12,15 @@ namespace Nikpc
     using System;
     using System.Collections.Generic;
     
-    public partial class ProductCategory
+    public partial class Log
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Type { get; set; }
+        public string Details { get; set; }
+
+        public override string ToString()
+        {
+            return Type.ToUpper() + " | " + Details;
+        }
     }
 }

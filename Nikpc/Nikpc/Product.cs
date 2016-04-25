@@ -24,10 +24,5 @@ namespace Nikpc
         public Nullable<int> OnSale { get; set; }
         public string Details { get; set; }
         public int Stock { get; set; }
-
-        public override string ToString()
-        {
-            return Name;
-        }
     }
 }

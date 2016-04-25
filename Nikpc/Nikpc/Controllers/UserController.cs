@@ -23,8 +23,25 @@ namespace Nikpc.Controllers
                        select akt;
 
             if (user.Count() == 1)
+            {
+                db.Log.Add(new Log
+                {
+                    Type = "Belépés",
+                    Details = (user.First() as User).Username + " belépett ekkor: " + DateTime.Now
+                });
+                db.SaveChanges();
                 return user.First();
-            return new Guest();
+            }
+            else
+            {
+                db.Log.Add(new Log
+                {
+                    Type = "Belépés",
+                    Details = "Vendég belépett ekkor: " + DateTime.Now
+                });
+                db.SaveChanges();
+                return new Guest();
+            }
 
         }
 
@@ -51,6 +68,11 @@ namespace Nikpc.Controllers
         {
             AllUsers.Add(user);
             db.User.Add(user);
+            db.Log.Add(new Log
+            {
+                Type = "Felhasználó regisztráció",
+                Details = user.Username + " regisztrációja"
+            });
             db.SaveChanges();
         }
 
@@ -58,6 +80,11 @@ namespace Nikpc.Controllers
         {
             AllUsers.Remove(user);
             db.User.Remove(db.User.Find(user.Id));
+            db.Log.Add(new Log
+            {
+                Type = "Felhasználó törlése",
+                Details = user.Username + " törlése"
+            });
             db.SaveChanges();
         }
 
@@ -73,6 +100,11 @@ namespace Nikpc.Controllers
             db.User.Find(oldUser.Id).Name = newUserData.Name;
             db.User.Find(oldUser.Id).Password = newUserData.Password;
             db.User.Find(oldUser.Id).PhoneNumber = newUserData.PhoneNumber;
+            db.Log.Add(new Log
+            {
+                Type = "Felhasználó módosítása",
+                Details = oldUser.Username + " módosítása"
+            });
             db.SaveChanges();
             
         }
