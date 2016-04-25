@@ -23,26 +23,14 @@ namespace Nikpc.Windows
         ProductController pc;
         CartController cc;
         nikpcEntities1 db = new nikpcEntities1();
-        int? fullPrice;
 
         public PaymentWindow(Object price)
         {
             pc = new ProductController();
             cc = new CartController();
-            Init();
             InitializeComponent();
             this.DataContext = price.ToString();
             chosenProductList.DataContext = cc;
-        }
-
-        private void Init()
-        {
-            fullPrice = 0;
-
-            foreach (var item in UserController.currentUser.Cart)
-            {
-                fullPrice += item.Product.Price * item.Quantity;
-            }
         }
 
         private void payButton_Click(object sender, RoutedEventArgs e)
@@ -51,6 +39,9 @@ namespace Nikpc.Windows
             {
                 pc.ReserveProduct(item);
             }
+            
+            UserController.currentUser.Cart = new List<ProductInCart>();
+
             MessageBox.Show("Sikeres rendelés!");
             Close();
         }
