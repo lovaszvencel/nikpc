@@ -66,13 +66,13 @@ namespace Nikpc.Windows
                 MessageBox.Show("Nem adta meg a belépési adatait!", "Hiányos adatok", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
-            if (UserController.currentUser != null && UserController.currentUser.Type != "admin")
+            if (UserController.currentUser != null && UserController.currentUser.Type != "admin" && !(UserController.currentUser is Guest))
             {
                 ProductListWindow plw = new ProductListWindow();
                 plw.Show();
                 this.Close();
             }
-            else if (UserController.currentUser != null)
+            else if (UserController.currentUser != null && !(UserController.currentUser is Guest))
             {
                 AdminWindow aw = new AdminWindow();
                 aw.Show();
