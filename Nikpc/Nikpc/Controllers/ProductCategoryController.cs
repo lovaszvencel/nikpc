@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class ProductCategoryController : Bindable, IProductCategoryHandler
+    public class ProductCategoryController : IProductCategoryHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
         public static ObservableCollection<ProductCategory> AllCategories = new ObservableCollection<ProductCategory>();
@@ -22,7 +22,11 @@ namespace Nikpc.Controllers
 
         public void ModifyCategory(string name, ProductCategory category)
         {
-            category.Name = name;
+            foreach (ProductCategory p in AllCategories)
+            {
+                if (p.Equals(category))
+                    p.Name = name;
+            }  
             db.ProductCategory.Find(category.Id).Name = name;
             db.SaveChanges();
         }
