@@ -24,7 +24,7 @@ namespace Nikpc.Controllers
 
             if (user.Count() == 1)
                 return user.First();
-            return null;
+            return new Guest();
 
         }
 

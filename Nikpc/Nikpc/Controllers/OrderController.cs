@@ -30,7 +30,7 @@ namespace Nikpc.Controllers
             {
                 Date = System.DateTime.Now,
                 UserID = UserController.currentUser.Id,
-                Total = total,
+                Total = (int)(total),
                 Delivery = true,
                 DeliveryAddress = UserController.currentUser.Address,
                 PaymentMethod = paymentMethod.ToString()

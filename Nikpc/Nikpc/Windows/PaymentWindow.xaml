@@ -10,5 +10,8 @@
         <Label Content="Kiválasztott termékek" HorizontalAlignment="Left" Margin="10,140,0,0" VerticalAlignment="Top"/>
         <ListBox ItemsSource="{Binding ProductList}" x:Name="chosenProductList" HorizontalAlignment="Center" Height="150" Margin="0,170,0,0" VerticalAlignment="Top" Width="472"/>
         <Button x:Name="payButton" Content="Fizetés" HorizontalAlignment="Center" Margin="0,340,0,0" VerticalAlignment="Top" Width="150" Height="40" Click="payButton_Click"/>
+        <Label x:Name="label" Content="Átváltás:" HorizontalAlignment="Left" Margin="315,96,0,0" VerticalAlignment="Top" FontStyle="Italic"/>
+        <ComboBox x:Name="currencies" HorizontalAlignment="Left" Margin="425,97,0,0" VerticalAlignment="Top" Width="57" SelectionChanged="currencies_SelectionChanged"/>
+        <Label x:Name="priceLabel" Content="" HorizontalAlignment="Left" Margin="374,96,0,0" VerticalAlignment="Top" FontStyle="Italic" Width="46" HorizontalContentAlignment="Right"/>
     </Grid>
 </Window>

@@ -1,4 +1,5 @@
-﻿using Nikpc.Controllers;
+﻿using Nikpc.Classes;
+using Nikpc.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -23,11 +24,13 @@ namespace Nikpc.Windows
     {
         UserController uc;
         nikpcEntities1 db;
+        Task task;
         public LogInWindow()
         {
             InitializeComponent();
             db = new nikpcEntities1();
-            Task.Run(() => TermekFeltolt()).ContinueWith(x => KategoriaFeltolt());
+            
+            task = Task.Run(() => TermekFeltolt()).ContinueWith(x => KategoriaFeltolt());
             uc = new UserController();
         }
 
@@ -102,6 +105,8 @@ namespace Nikpc.Windows
 
         private void enterAsQuestClick(object sender, RoutedEventArgs e)
         {
+            task.Wait();
+            UserController.currentUser = new Guest();
             ProductListWindow plw = new ProductListWindow();
             plw.dataButton.Visibility = System.Windows.Visibility.Hidden;
             plw.Show();

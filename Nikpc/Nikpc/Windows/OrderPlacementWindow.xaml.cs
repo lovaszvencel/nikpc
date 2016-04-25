@@ -60,7 +60,7 @@ namespace Nikpc.Windows
         private void placeOrderButton_Click(object sender, RoutedEventArgs e)
         {
             PaymentWindow pw = new PaymentWindow(totalSumTxt.DataContext);
-            oc.PlaceOrder(deliveryChkBox.IsChecked, int.Parse(totalSumTxt.DataContext.ToString()), Enums.PaymentMethod.Card);
+            oc.PlaceOrder(deliveryChkBox.IsChecked, (int)double.Parse(totalSumTxt.DataContext.ToString()), Enums.PaymentMethod.Card);
             pw.Show();
             this.Close();
         }
