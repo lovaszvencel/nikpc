@@ -25,6 +25,15 @@ namespace Nikpc.Controllers
             }
         }
         
+        public static void Atmasol()
+        {
+            FilteredProducts.Clear();
+            foreach (Product p in AllProducts)
+            {
+                FilteredProducts.Add(p);
+            }
+        }
+
         // TODO sort
         public void ViewSortProducts(string sortByParameter, bool ascending)
         {
