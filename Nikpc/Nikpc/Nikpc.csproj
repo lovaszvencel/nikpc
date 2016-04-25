@@ -88,6 +88,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Bindable.cs" />
     <Compile Include="Classes\Cart.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\OrderController.cs" />

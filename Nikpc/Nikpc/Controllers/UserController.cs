@@ -1,4 +1,5 @@
-﻿using Nikpc.Interfaces;
+﻿using Nikpc.Classes;
+using Nikpc.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,9 +8,11 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Controllers
 {
-    public class UserController : IDataHandler, ILogInHandler, INewUserHandler
+    public class UserController : Bindable, IDataHandler, ILogInHandler, INewUserHandler
     {
         nikpcEntities1 db = new nikpcEntities1();
+        public static User currentUser;
+        public static List<User> AllUsers = new List<User>();
 
         public void ModifyMyAddress(string newAddress)
         {
@@ -51,7 +54,25 @@ namespace Nikpc.Controllers
 
         public void AddUser(User user)
         {
+            AllUsers.Add(user);
+            OnPropertyChanged("AllUsers");
             db.User.Add(user);
+            db.SaveChanges();
+        }
+
+        public void DeleteUser(User user)
+        {
+            AllUsers.Remove(user);
+            OnPropertyChanged("AllUsers");
+            db.User.Remove(db.User.Find(user.Id));
+            db.SaveChanges();
+        }
+
+        public void ModifyUser(User oldUser, User newUser)
+        {
+            AllUsers[AllUsers.IndexOf(oldUser)] = newUser;
+            db.User.Remove(db.User.Find(oldUser.Id));
+            db.User.Add(newUser);
             db.SaveChanges();
         }
     }
