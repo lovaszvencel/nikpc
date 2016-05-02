@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface ILogInHandler
+    public interface ILogInHandler
     {
         User LogInAuthentication(string username, string password);
-        bool CrowdCheck();
     }
 }

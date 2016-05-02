@@ -8,12 +8,9 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface IOrderHandler
+    public interface IOrderHandler
     {
-        void ModifyOrderPaymentMethod(PaymentMethod newPaymentMethod);
-        void EmptyOrderCart();
         void PlaceOrder(bool? delivery, int total, PaymentMethod paymentMethod);
         void DeleteOrder(Order order);
-        void ModifyOrderProductQuantity(Product product, int newQuantity);
     }
 }

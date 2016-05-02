@@ -10,6 +10,5 @@ namespace Nikpc.Interfaces
     {
         void ModifyProduct(Product oldProduct, Product newProductData);
         void DeleteProduct(Product product);
-        bool ReserveProduct(Product product, int quantity);
     }
 }

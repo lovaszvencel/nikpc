@@ -28,16 +28,6 @@ namespace Nikpc.Controllers
             }
         }
 
-        public void ModifyOrderPaymentMethod(PaymentMethod newPaymentMethod)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void EmptyOrderCart()
-        {
-            throw new NotImplementedException();
-        }
-
         public void PlaceOrder(bool? delivery, int total, PaymentMethod paymentMethod)
         {
             //új rekord felvétele az order táblába
@@ -76,31 +66,6 @@ namespace Nikpc.Controllers
             var asd = order.Id;
             db.Order.Remove(db.Order.Find(order.Id));
             db.SaveChanges();
-        }
-
-        public void ModifyOrderProductQuantity(Product product, int newQuantity)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Order SearchOrder(string fullname, int osszeg, PaymentMethod paymentMethod, List<Product> products)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SortOrders(string sortByParameter, bool ascending)
-        {
-            throw new NotImplementedException();
-        }
-        
-        public void ModifyOrder(Order oldOrder, Order newOrderData)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void PlaceOrder(Cart cart, PaymentMethod paymentMethod)
-        {
-            throw new NotImplementedException();
         }
     }
 }

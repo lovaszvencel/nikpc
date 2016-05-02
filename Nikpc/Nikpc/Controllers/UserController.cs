@@ -45,11 +45,6 @@ namespace Nikpc.Controllers
 
         }
 
-        public bool CrowdCheck()
-        {
-            throw new NotImplementedException();
-        }
-
         public string UserDataCheck(string username, string email)
         {
             bool van = false;

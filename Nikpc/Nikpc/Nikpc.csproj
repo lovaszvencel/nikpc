@@ -89,16 +89,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Classes\Cart.cs" />
     <Compile Include="Classes\Guest.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ProductAdministrationController.cs" />
     <Compile Include="Controllers\ProductCategoryController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Controllers\SystemFunctionController.cs" />
-    <Compile Include="Controllers\InvoiceController.cs" />
-    <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Enums\PaymentMethod.cs" />
     <Compile Include="Invoice.cs">
@@ -205,12 +201,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Interfaces\ILogInHandler.cs" />
-    <Compile Include="Interfaces\IUserHandler.cs" />
-    <Compile Include="Interfaces\IPaymentHandler.cs" />
     <Compile Include="Interfaces\IOrderListHandler.cs" />
     <Compile Include="Interfaces\IOrderHandler.cs" />
-    <Compile Include="Interfaces\ISystemFunctionHandler.cs" />
-    <Compile Include="Interfaces\IInvoiceHandler.cs" />
     <Compile Include="Interfaces\IProductCategoryHandler.cs" />
     <Compile Include="Interfaces\IProductHandler.cs" />
     <Compile Include="Interfaces\IProductListHandler.cs" />

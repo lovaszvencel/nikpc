@@ -49,11 +49,6 @@ namespace Nikpc.Controllers
             db.SaveChanges();
         }
 
-        public bool ReserveProduct(Product product, int quantity)
-        {
-            // TODO adatbázisban kell ehhez módosítani?
-            return true;
-        }
         public void AddProduct(Product product)
         {
             ProductController.AllProducts.Add(product);

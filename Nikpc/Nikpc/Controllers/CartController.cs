@@ -30,45 +30,5 @@ namespace Nikpc.Controllers
                 }
             }
         }
-
-        public void AddProductRating(int value, string review)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OpenProductImage(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddProductToCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteProductFromCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ListAddProductToCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ListDeleteProductFromCart(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ViewSortProducts(string sortByParameter, bool ascending)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

@@ -35,22 +35,6 @@ namespace Nikpc.Controllers
             }
         }
 
-        // TODO sort
-        public void ViewSortProducts(string sortByParameter, bool ascending)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddProductRating(int value, string review)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OpenProductImage(Product product)
-        {
-            throw new NotImplementedException();
-        }
-
         public void AddProductToCart(Product product)
         {
             UserController.currentUser.Cart.Add(new ProductInCart(product));
