@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface IProductListViewHandler
+    public interface IProductListViewHandler
     {
         void ViewSearchProduct(string productName, ProductCategory productCategory, int priceFrom, int priceTo);
     }

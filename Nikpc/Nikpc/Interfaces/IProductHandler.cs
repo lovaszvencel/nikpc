@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface IProductHandler
+    public interface IProductHandler
     {
         void ModifyProduct(Product oldProduct, Product newProductData);
         void DeleteProduct(Product product);

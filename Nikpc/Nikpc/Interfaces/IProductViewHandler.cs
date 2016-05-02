@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface IProductViewHandler
+    public interface IProductViewHandler
     {
         void AddProductToCart(Product product); 
     }

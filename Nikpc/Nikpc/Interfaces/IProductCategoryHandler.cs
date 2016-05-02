@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Nikpc.Interfaces
 {
-    interface IProductCategoryHandler
+    public interface IProductCategoryHandler
     {
         void AddCategory(string name);
         void ModifyCategory(string name, ProductCategory category);
