@@ -177,9 +177,6 @@
     <Compile Include="Windows\ProductCategoriesWindow.xaml.cs">
       <DependentUpon>ProductCategoriesWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\ProductInfo.xaml.cs">
-      <DependentUpon>ProductInfo.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Windows\PaymentWindow.xaml.cs">
       <DependentUpon>PaymentWindow.xaml</DependentUpon>
     </Compile>
@@ -266,10 +263,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\ProductCategoriesWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Windows\ProductInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

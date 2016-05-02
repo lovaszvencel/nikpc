@@ -42,7 +42,7 @@ namespace Nikpc.Windows
 
         private void productList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            ProductInfo piw = new ProductInfo((Product)productList.SelectedItem);
+            ModifyProductInfo piw = new ModifyProductInfo((Product)productList.SelectedItem, false);
             piw.Show();
         }
 
