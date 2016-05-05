@@ -39,15 +39,18 @@ namespace Nikpc.Windows
             {
                 productNameTxt.Background = Brushes.Transparent;
                 productNameTxt.BorderBrush = Brushes.Transparent;
+                productNameTxt.IsEnabled = false;
                 checkBox.IsEnabled = false;
                 productPriceTxt.Background = Brushes.Transparent;
                 productPriceTxt.BorderBrush = Brushes.Transparent;
+                productPriceTxt.IsEnabled = false;
                 productStockTxt.Background = Brushes.Transparent;
                 productStockTxt.BorderBrush = Brushes.Transparent;
+                productStockTxt.IsEnabled = false;
                 productDetailsTxt.Background = Brushes.Transparent;
                 productDetailsTxt.BorderBrush = Brushes.Transparent;
+                productDetailsTxt.IsEnabled = false;
                 filePathTxt.Visibility = Visibility.Hidden;
-                browseButton.Visibility = Visibility.Hidden;
                 modifyProductButton.Visibility = Visibility.Hidden;
                 label.Visibility = Visibility.Hidden;
                 addcartButton.Visibility = Visibility.Visible;
