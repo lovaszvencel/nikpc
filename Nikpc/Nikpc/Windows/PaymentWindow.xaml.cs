@@ -70,9 +70,14 @@ namespace Nikpc.Windows
 
                 string rates = client.GetExchangeRates(date.ToString(), date.ToString(), currencies.SelectedValue.ToString());
                 XDocument doc = XDocument.Parse(rates);
-                int unit = int.Parse(doc.Element("MNBExchangeRates").Element("Day").Element("Rate").Attribute("unit").Value);
-                double rate = double.Parse(doc.Element("MNBExchangeRates").Element("Day").Element("Rate").Value);
-                priceLabel.Content = (localPrice * unit) / rate;
+                if (doc.Element("MNBExchangeRates").Element("Day").Element("Rate") != null)
+                {
+                    int unit = int.Parse(doc.Element("MNBExchangeRates").Element("Day").Element("Rate").Attribute("unit").Value);
+                    double rate = double.Parse(doc.Element("MNBExchangeRates").Element("Day").Element("Rate").Value);
+                    priceLabel.Content = (localPrice * unit) / rate;
+                }
+                else
+                    priceLabel.Content = localPrice;
             }
         }
 
