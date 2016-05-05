@@ -73,7 +73,7 @@ namespace Nikpc.Windows
                 Stock = int.Parse(productStockTxt.Text),
                 ImageURL = filePathTxt.Text,
                 RatingAverage = 0,
-                CategoryID = comboBox.SelectedItem != null ? (comboBox.SelectedItem as ProductCategory).Id : 0,
+                CategoryID = comboBox.SelectedItem != null ? (comboBox.SelectedItem as ProductCategory).Id : p.CategoryID,
                 Available = checkBox.IsChecked.Value
             });
             MessageBox.Show("A módosítás sikeres!");

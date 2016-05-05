@@ -39,6 +39,9 @@ namespace Nikpc.Controllers
             oldProduct.Price = newProductData.Price;
             oldProduct.RatingAverage = newProductData.RatingAverage;
             oldProduct.Stock = newProductData.Stock;
+            oldProduct.CategoryID = newProductData.CategoryID;
+            oldProduct.Available = newProductData.Available;
+            oldProduct.Details = newProductData.Details;
                 db.SaveChanges();
         }
 
