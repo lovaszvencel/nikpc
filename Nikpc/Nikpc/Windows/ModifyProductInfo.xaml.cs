@@ -46,15 +46,19 @@ namespace Nikpc.Windows
                 productStockTxt.BorderBrush = Brushes.Transparent;
                 productDetailsTxt.Background = Brushes.Transparent;
                 productDetailsTxt.BorderBrush = Brushes.Transparent;
-                filePathTxt.Background = Brushes.Transparent;
-                filePathTxt.BorderBrush = Brushes.Transparent;
+                filePathTxt.Visibility = Visibility.Hidden;
                 browseButton.Visibility = Visibility.Hidden;
                 modifyProductButton.Visibility = Visibility.Hidden;
                 label.Visibility = Visibility.Hidden;
                 addcartButton.Visibility = Visibility.Visible;
                 comboBox.Visibility = Visibility.Hidden;
-                categoryLabel.Content = c.First().Name;
-                categoryLabel.Visibility = Visibility.Visible;
+                if (p.CategoryID != 0)
+                {
+                    categoryLabel.Content = c.First().Name;
+                    categoryLabel.Visibility = Visibility.Visible;
+                }
+                else
+                    label1_Copy3.Visibility = Visibility.Hidden;
             }
         }
 

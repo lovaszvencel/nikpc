@@ -21,7 +21,7 @@ namespace Nikpc.Controllers
 
         public void ModifyProduct(Product oldProduct, Product newProductData)
         {
-            if(newProductData.ImageURL!="")
+            if (newProductData.ImageURL != "" && db.Product.Find(oldProduct.Id).ImageURL != newProductData.ImageURL)
             {
                 db.Product.Find(oldProduct.Id).ImageURL = newProductData.ImageURL;
                 oldProduct.ImageURL = newProductData.ImageURL;
@@ -39,7 +39,7 @@ namespace Nikpc.Controllers
             oldProduct.Price = newProductData.Price;
             oldProduct.RatingAverage = newProductData.RatingAverage;
             oldProduct.Stock = newProductData.Stock;
-            db.SaveChanges();
+                db.SaveChanges();
         }
 
         public void DeleteProduct(Product product)

@@ -69,6 +69,7 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
@@ -346,6 +347,30 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Resources\trusthangfal.png" />
+    <Resource Include="Resources\trustbill.png" />
+    <Resource Include="Resources\speedlinkhangfal.png" />
+    <Resource Include="Resources\speedlinkegér.png" />
+    <Resource Include="Resources\speedlinkbill.png" />
+    <Resource Include="Resources\samsungnyomtató.png" />
+    <Resource Include="Resources\samsungmonitor.png" />
+    <Resource Include="Resources\macbook.png" />
+    <Resource Include="Resources\logitechhangfal.png" />
+    <Resource Include="Resources\logitechegér.png" />
+    <Resource Include="Resources\logitechbill.png" />
+    <Resource Include="Resources\lgmonitor.png" />
+    <Resource Include="Resources\lenovonotebook.png" />
+    <Resource Include="Resources\hpnyomtató.png" />
+    <Resource Include="Resources\hpnotebook.png" />
+    <Resource Include="Resources\hamaegér.png" />
+    <Resource Include="Resources\hamabill.png" />
+    <Resource Include="Resources\epsonnyomtató.png" />
+    <Resource Include="Resources\canonnyomtató.png" />
+    <Resource Include="Resources\asusszámítógép.png" />
+    <Resource Include="Resources\asusmonitor.png" />
+    <Resource Include="Resources\asusegér.png" />
+    <Resource Include="Resources\applegép.png" />
+    <Resource Include="Resources\acermonitor.png" />
     <None Include="Service References\CurrencyExchange\Nikpc.CurrencyExchange.GetCurrenciesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>

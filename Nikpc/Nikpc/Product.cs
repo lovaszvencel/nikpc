@@ -11,8 +11,9 @@ namespace Nikpc
 {
     using System;
     using System.Collections.Generic;
+    using System.Windows.Data;
     
-    public partial class Product
+    public partial class Product : IValueConverter
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -28,6 +29,17 @@ namespace Nikpc
         public override string ToString()
         {
             return Name + ", " + Price + " HUF";
+        }
+
+        public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            string eleres = (string)value;
+            return "pack://application:,,,/Resources/" + eleres;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
+        {
+            throw new NotImplementedException();
         }
     }
 }

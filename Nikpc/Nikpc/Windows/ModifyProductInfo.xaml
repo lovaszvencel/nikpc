@@ -4,11 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Nikpc.Controllers"
+        xmlns:kepconvert="clr-namespace:Nikpc"
         mc:Ignorable="d"
         Title="Termék módosítása" Height="400" Width="400"
         Background="#FFB2D3CD">
+    <Window.Resources>
+        <kepconvert:Product x:Key="NTU"/>
+    </Window.Resources>
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="150" Margin="18,51,0,0" VerticalAlignment="Top" Width="150"/>
+        <!-- Source="{Binding ImageURL}" -->
+        <Image Source="{Binding ImageURL, Converter={StaticResource NTU}}" x:Name="image" HorizontalAlignment="Left" Height="150" Margin="18,51,0,0" VerticalAlignment="Top" Width="150"/>
         <Label x:Name="label1" Content="Ára:" HorizontalAlignment="Left" Height="26" Margin="180,51,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy" Content="Részletek:" HorizontalAlignment="Left" Height="26" Margin="180,82,0,0" VerticalAlignment="Top" Width="72" FontSize="12"/>
         <Label x:Name="label1_Copy1" Content="Darab:" HorizontalAlignment="Left" Height="26" Margin="180,175,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
@@ -19,10 +24,10 @@
         <TextBox Text="{Binding Stock}" x:Name="productStockTxt" HorizontalAlignment="Left" Height="26" Margin="263,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.444,5.54"/>
         <Label x:Name="label" Content="Új kép:" HorizontalAlignment="Left" Height="28" Margin="18,227,0,0" VerticalAlignment="Top" Width="50"/>
         <Button x:Name="browseButton" Content="Tallózás" HorizontalAlignment="Left" Height="28" Margin="91,227,0,0" VerticalAlignment="Top" Width="77"/>
-        <TextBox x:Name="filePathTxt" HorizontalAlignment="Left" Height="22" Margin="18,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <TextBox TextWrapping="Wrap" Text="{Binding ImageURL}" x:Name="filePathTxt" HorizontalAlignment="Left" Height="66" Margin="18,260,0,0" VerticalAlignment="Top" Width="150"/>
         <CheckBox IsChecked="{Binding Available}" x:Name="checkBox" Content="elérhető" HorizontalAlignment="Left" Margin="263,211,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.485,0.316"/>
         <Label x:Name="label1_Copy2" Content="Elérhetőség:" HorizontalAlignment="Left" Height="26" Margin="180,206,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
-        <ComboBox ItemsSource="{Binding Source={x:Static local:ProductCategoryController.AllCategories}}" x:Name="comboBox" HorizontalAlignment="Left" Margin="262,247,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox ItemsSource="{Binding Source={x:Static local:ProductCategoryController.AllCategories}}" SelectedItem="{Binding CategoryID}" x:Name="comboBox" HorizontalAlignment="Left" Margin="262,247,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="label1_Copy3" Content="Kategória:" HorizontalAlignment="Left" Height="26" Margin="180,247,0,0" VerticalAlignment="Top" Width="78" FontSize="12"/>
         <Button x:Name="addcartButton" Content="Kosárba" HorizontalAlignment="Left" Height="40" Margin="262,286,0,0" VerticalAlignment="Top" Width="120" Click="addToCartButton_Click" Visibility="Hidden"/>
         <Label x:Name="categoryLabel" Content="" HorizontalAlignment="Left" Margin="262,247,0,0" VerticalAlignment="Top" Visibility="Hidden"/>
